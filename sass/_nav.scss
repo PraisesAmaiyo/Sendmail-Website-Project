@@ -1,0 +1,98 @@
+.navigation-header {
+    background-image: linear-gradient(to right, rgba($color-primary, .93), rgba($color-primary-dark, .93));
+    grid-column: 1/-1;
+    grid-row: navigation-start/ navigation-end;
+    padding: 4rem;
+    padding-bottom: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1080px 1fr;
+}
+
+.navigation {
+    grid-column: 2/3;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        width: 6rem;
+        height: 6rem
+    }
+
+    .main-nav-list {
+        list-style: none;
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .main-nav-link:link,
+    .main-nav-link:visited {
+        display: inline-block;
+        text-decoration: none;
+        color: $color-grey-dark-1;
+        font-weight: 600;
+        font-size: 2rem;
+        transition: all 0.5s;
+    }
+
+    .main-nav-link:hover,
+    .main-nav-link:active {
+        color: $color-grey-light-1;
+    }
+
+    .main-nav-link.hero-btn-login,
+    .main-nav-link.hero-btn-reg {
+        background-color: $color-grey-dark-1;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 400;
+        padding: 1rem 3.5rem;
+        border-radius: 5rem;
+        transition: all 0.5s;
+        border: none;
+        margin-right: 0;
+
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .main-nav-link.hero-btn-reg {
+        background-color: #fff;
+        color: $color-grey-dark-1;
+        box-shadow: inset 0px 0px 0px 2px $color-grey-dark-1;
+        transition: all 0.5s;
+
+        &:hover {
+            transform: scale(1.1);
+            background-color: #e9e9ee;
+        }
+    }
+}
+
+// .img-fluid {
+//     max-width: 100%;
+//     height: auto;
+// }
+
+// .header {
+//     overflow: hidden;
+//     padding-top: 18.5rem;
+//     padding-bottom: 18rem;
+// }
+
+// .header .image-container {
+//     position: relative;
+// }
+
+// .header .image-container img {
+//     position: absolute;
+//     top: -180px;
+//     left: -10px;
+//     width: 840px;
+//     max-width: none;
+// }

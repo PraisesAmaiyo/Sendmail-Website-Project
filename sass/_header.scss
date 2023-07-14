@@ -1,0 +1,75 @@
+.section-hero {
+    background-image: linear-gradient(to right, rgba($color-primary, .93), rgba($color-primary-dark, .93));
+    grid-column: 1/-1;
+    grid-row: header-start/ header-end;
+    padding: 10rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1100px 1fr;
+}
+
+.hero {
+    grid-column: 2/3;
+
+    display: grid;
+    grid-template-columns: 45% 55%;
+
+    align-items: center;
+    justify-content: center;
+
+    &-text {
+        &-main {
+            font-size: 5rem;
+            font-weight: 600;
+            color: $color-grey-dark-1;
+        }
+
+        &-mini {
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: $color-grey-light-1;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &-image {
+
+        &_image {
+            height: 60rem
+        }
+    }
+}
+
+
+.delivered-meals {
+    display: flex;
+    margin-top: 8rem;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.delivered-imgs {
+    display: flex;
+}
+
+.delivered-imgs img {
+    height: 4.8rem;
+    width: 4.8rem;
+    border-radius: 50%;
+    margin-right: -1.6rem;
+    border: 3px solid #fdf2e9;
+}
+
+.delivered-imgs img:last-child {
+    margin: 0;
+}
+
+.delivered-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $color-grey-dark-1;
+}
+
+.delivered-text span {
+    color: $color-grey-light-1;
+    font-weight: 700;
+}
