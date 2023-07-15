@@ -1,25 +1,31 @@
 // COLOR VARIABLES
-$color-primary: #fdf1dd;
-$color-primary-dark: #fff2dc;
+$color-primary: #265ca5;
+$color-primary-light: #2b5c9d;
 
-$color-secondary: #101d2c;
+$color-secondary-dark: #22b6d8;
+$color-secondary-light: #d4deed;
 
-$color-grey-light-1: #f25c05;
-$color-grey-light-2: #aaa;
+// $color-grey-light-1: #f25c05;
+$color-grey-light-1: #fff;
+$color-grey-light-2: #eef1f6;
 
-$color-grey-dark-1: #272556;
+$color-grey-dark-1: #12468a;
 $color-grey-dark-2: #6D5D4B;
 
 // FONT VARIABLES
-$font-primary: 'Nunito', sans-serif;
+$font-primary: 'Montserrat', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
 // RESPONSIVE VARIABLES
-$bp-largest: 75em; //1200px
-$bp-large: 62.5em; //1000px
-$bp-medium: 50em; //800px
-$bp-small: 37.5em; //600px
-$bp-smallest: 20em;
+// RESPONSIVE VARIABLES
+$bp-largest: 75em; //
+$bp-larger: 62.5em; //
+$bp-large: 55.7em; //
+$bp-big: 50.3em; //
+$bp-medium: 38.6em; //
+$bp-small: 30.5em; //
+$bp-smaller: 27.8em; //
+$bp-smallest: 30em;
 
 *,
 *::before,
@@ -37,7 +43,7 @@ html {
         font-size: 50%;
     }
 
-    @media only screen and (max-width:$bp-smallest) {
+    @media only screen and (max-width:$bp-medium) {
         font-size: 40%;
     }
 }
@@ -47,17 +53,21 @@ body {
     font-display: swap;
     color: $color-grey-dark-2;
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
 .container {
+    overflow-x: hidden;
     display: grid;
-    grid-template-rows: [navigation-start] max-content [navigation-end header-start] max-content[header-end about-start] max-content [about-end featured-start] max-content [featured-end feature-start] min-content [feature-end footer-start] 1fr [footer-end];
+    grid-template-rows: [navigation-start] max-content [navigation-end header-start] max-content[header-end about-start] max-content [about-end featured-start] max-content [featured-end footer-start] min-content [footer-end footer-start] 1fr [footer-end];
 
     grid-template-columns: 1fr repeat(6, [col-start] minmax(min-content, 14rem)[col-end]) 1fr;
 
     // @media only screen and (max-width:$bp-large) {
-    //     grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    //     // grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    //     // overflow-x: auto;
+    // }
+
     //     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     // }
 

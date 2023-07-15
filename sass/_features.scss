@@ -2,10 +2,14 @@
     background-image: linear-gradient(to right, rgba(#f9f8f8, .93), rgba(#e0dfdf, .05));
     grid-column: 1/-1;
     grid-row: featured-start/ about-end;
-    padding: 10rem 4rem;
+    padding: 5rem 2rem;
 
     display: grid;
-    grid-template-columns: 1fr 1100px 1fr;
+    grid-template-columns: 1fr 900px 1fr;
+
+    @media only screen and (max-width:$bp-largest) {
+        grid-template-columns: 1fr 100% 1fr;
+    }
 }
 
 .feature {
@@ -17,71 +21,126 @@
     text-align: center;
     font-size: 5rem;
     font-weight: 600;
-
+    margin: 0 auto;
 
     &-heading {
+        position: relative;
+        font-size: 5rem;
+        font-weight: 700;
         color: $color-grey-dark-1;
         grid-row: 1/2;
-        margin: 4rem 0 6rem 0;
+        margin-bottom: 2.5rem;
+
+        @media only screen and (max-width:$bp-big) {
+            font-size: 4rem;
+            margin-bottom: 1.8rem;
+        }
+
+        @media only screen and (max-width:$bp-small) {
+            font-size: 3rem;
+            margin-bottom: 1.6rem;
+        }
 
         &_span {
-            color: $color-grey-light-1;
-            text-decoration: underline;
+            font-weight: 500;
+            color: $color-secondary-dark;
+        }
+    }
+
+    .stroke {
+        width: 18rem;
+        position: absolute;
+        top: 77%;
+        left: 60%;
+
+        @media only screen and (max-width:$bp-big) {
+            width: 15rem;
+        }
+
+        @media only screen and (max-width:$bp-small) {
+            width: 10rem;
+            top: 65%;
+            left: 65%;
+        }
+
+        @media only screen and (max-width:$bp-smaller) {
+            display: none;
         }
     }
 
     .featured {
         text-align: center;
+        justify-content: center;
         display: grid;
-        grid-template-columns: repeat(3, minmax(6rem, 1fr));
+        grid-template-columns: repeat(3, minmax(15rem, 1fr));
         grid-template-rows: repeat(2, 1fr);
-        row-gap: 4rem;
-        column-gap: 10rem;
-        ;
+        row-gap: 1.5rem;
+        column-gap: 5rem;
+        margin: 0 auto;
+        padding: 4rem;
+
+        @media only screen and (max-width:$bp-big) {
+            grid-template-columns: repeat(2, minmax(10rem, 40rem));
+            grid-template-rows: repeat(3, 1fr);
+            padding: 3rem;
+            row-gap: 4rem
+        }
+
+        @media only screen and (max-width:$bp-medium) {
+            grid-template-columns: 80%;
+            grid-template-rows: repeat(6, 1fr);
+            padding: 3rem;
+            row-gap: 2rem;
+            padding: 2rem;
+        }
 
         &-group {
             &-icon {
-                font-size: 3.5rem;
-                margin-bottom: 3.5rem;
+                font-size: 3rem;
+                margin-bottom: 3rem;
+
+                @media only screen and (max-width:$bp-medium) {
+                    margin-bottom: 1.5rem
+                }
 
                 .icon-lock {
                     background-image: linear-gradient(to bottom, rgba(#f3effd, .93), rgba(#dbd0fa, .93));
-                    padding: 3rem 3rem;
+                    padding: 2rem 2rem;
                     color: #8763ee;
                     border-radius: 50px;
                 }
 
                 .icon-globe {
                     background-image: linear-gradient(to bottom, rgba(#b2f2bb, .93), rgba(#8ce99a, .93));
-                    padding: 3rem 3rem;
+                    padding: 2rem 2rem;
                     color: #099268;
                     border-radius: 20px;
                 }
 
                 .icon-business-time {
                     background-image: linear-gradient(to bottom, rgba(#feefe6, .93), rgba(#fcdecd, .93));
-                    padding: 3rem 3rem;
+                    padding: 2rem 2rem;
                     color: #f25c05;
                     border-radius: 50px;
                 }
 
                 .icon-user-secret {
                     background-image: linear-gradient(to bottom, rgba(#e7f3f5, .93), rgba(#cee7eb, .93));
-                    padding: 3rem 3rem;
+                    padding: 2rem 2rem;
                     color: #0c8599;
                     border-radius: 50px;
                 }
 
                 .icon-user-shield {
                     background-image: linear-gradient(to bottom, rgba(#e5d4e2, .93), rgba(#d9bfd3, .93));
-                    padding: 3rem 3rem;
+                    padding: 2rem 2rem;
                     color: #7f2a6c;
                     border-radius: 20px;
                 }
 
                 .icon-mask {
                     background-image: linear-gradient(to bottom, rgba(#d3eafd, .93), rgba(#bce0fb, .93));
-                    padding: 3rem 3rem;
+                    padding: 2rem 2rem;
                     color: #2196f3;
                     border-radius: 50px;
                 }
@@ -90,12 +149,12 @@
             &-heading {
                 font-size: 2rem;
                 font-weight: 600;
-
-                color: $color-grey-dark-1
+                color: $color-grey-dark-1;
+                margin-bottom: 1rem;
             }
 
             &-text {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 color: $color-grey-dark-1
             }
         }

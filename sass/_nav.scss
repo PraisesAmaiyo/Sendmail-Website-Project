@@ -1,12 +1,17 @@
 .navigation-header {
-    background-image: linear-gradient(to right, rgba($color-primary, .93), rgba($color-primary-dark, .93));
+    background-image: linear-gradient(to right, rgba($color-primary, 2), rgba($color-primary-light, .93));
     grid-column: 1/-1;
     grid-row: navigation-start/ navigation-end;
-    padding: 4rem;
+    padding: 2rem;
     padding-bottom: 0;
 
     display: grid;
-    grid-template-columns: 1fr 1080px 1fr;
+    grid-template-columns: 1fr 900px 1fr;
+
+    @media only screen and (max-width:$bp-largest) {
+        grid-template-columns: 1fr 100% 1fr;
+        padding: 2rem 5rem
+    }
 }
 
 .navigation {
@@ -17,14 +22,14 @@
     align-items: center;
 
     .logo {
-        width: 6rem;
-        height: 6rem
+        width: 4rem;
+        height: 4rem
     }
 
     .main-nav-list {
         list-style: none;
         display: flex;
-        gap: 3rem;
+        gap: 2rem;
         align-items: center;
     }
 
@@ -32,28 +37,32 @@
     .main-nav-link:visited {
         display: inline-block;
         text-decoration: none;
-        color: $color-grey-dark-1;
-        font-weight: 600;
-        font-size: 2rem;
-        transition: all 0.5s;
+        color: $color-grey-light-1;
+        font-weight: 400;
+        font-size: 1.6rem;
+        transition: all 0.3s;
     }
 
     .main-nav-link:hover,
     .main-nav-link:active {
-        color: $color-grey-light-1;
+        color: $color-secondary-light;
+        transform: scale(1.1);
     }
 
     .main-nav-link.hero-btn-login,
     .main-nav-link.hero-btn-reg {
         background-color: $color-grey-dark-1;
         color: #fff;
-        font-size: 1.5rem;
-        font-weight: 400;
-        padding: 1rem 3.5rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        font-family: $font-primary;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: 1rem 1.8rem;
         border-radius: 5rem;
-        transition: all 0.5s;
+        margin-right: 0rem;
+        transition: all 0.3s;
         border: none;
-        margin-right: 0;
 
 
         &:hover {
@@ -65,34 +74,11 @@
         background-color: #fff;
         color: $color-grey-dark-1;
         box-shadow: inset 0px 0px 0px 2px $color-grey-dark-1;
-        transition: all 0.5s;
+        transition: all 0.3s;
 
         &:hover {
             transform: scale(1.1);
-            background-color: #e9e9ee;
+            background-color: $color-secondary-light;
         }
     }
 }
-
-// .img-fluid {
-//     max-width: 100%;
-//     height: auto;
-// }
-
-// .header {
-//     overflow: hidden;
-//     padding-top: 18.5rem;
-//     padding-bottom: 18rem;
-// }
-
-// .header .image-container {
-//     position: relative;
-// }
-
-// .header .image-container img {
-//     position: absolute;
-//     top: -180px;
-//     left: -10px;
-//     width: 840px;
-//     max-width: none;
-// }
