@@ -13,17 +13,30 @@
 
 .navigation {
     grid-column: 2/3;
+<<<<<<< HEAD
     padding: 2rem;
+=======
+    padding: 4rem;
+>>>>>>> b723fcaf8bd73abaea33a4c976d60ab790809eaf
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 1rem;
+<<<<<<< HEAD
     height: 8rem;
     position: relative;
 
     .logo {
         width: 3.5rem;
         height: 3.5rem;
+=======
+    height: 10rem;
+    position: relative;
+
+    .logo {
+        width: 4rem;
+        height: 4rem;
+>>>>>>> b723fcaf8bd73abaea33a4c976d60ab790809eaf
     }
 
     .main-nav-list {
@@ -68,12 +81,15 @@
         transition: all 0.3s;
         border: none;
 
+<<<<<<< HEAD
 
         @media only screen and (max-width:$bp-big) {
             font-size: 3.5rem;
             margin-top: 4rem;
         }
 
+=======
+>>>>>>> b723fcaf8bd73abaea33a4c976d60ab790809eaf
         &:hover {
             transform: scale(1.1);
         }

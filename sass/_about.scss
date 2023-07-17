@@ -70,6 +70,10 @@
         @media only screen and (max-width:$bp-small) {
             width: 17rem;
         }
+
+        @media only screen and (max-width:$bp-smaller) {
+            display: none;
+        }
     }
 
     &-text {
