@@ -55,9 +55,9 @@
         left: 60%;
 
         @media only screen and (max-width:$bp-big) {
-            width: 15rem;
+            width: 12rem;
             top: 85%;
-            left: 64%;
+            left: 58%;
         }
 
         // @media only screen and (max-width:$bp-small) {
@@ -89,14 +89,14 @@
             // grid-template-rows: repeat(3, 1fr);
             grid-template-columns: 1fr;
             grid-template-rows: repeat(6, 1fr);
-            padding: 5rem;
+            padding: 3rem;
             row-gap: 4rem
         }
 
         @media only screen and (max-width:$bp-medium) {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(6, 1fr);
-            padding: 3.2rem;
+            padding: 3rem;
             row-gap: 2rem;
             padding: 2rem;
         }

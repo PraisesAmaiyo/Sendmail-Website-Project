@@ -13,17 +13,17 @@
 
 .navigation {
     grid-column: 2/3;
-    padding: 4rem;
+    padding: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 1rem;
-    height: 10rem;
+    height: 8rem;
     position: relative;
 
     .logo {
-        width: 4rem;
-        height: 4rem;
+        width: 3.5rem;
+        height: 3.5rem;
     }
 
     .main-nav-list {
@@ -68,6 +68,12 @@
         transition: all 0.3s;
         border: none;
 
+
+        @media only screen and (max-width:$bp-big) {
+            font-size: 3.5rem;
+            margin-top: 4rem;
+        }
+
         &:hover {
             transform: scale(1.1);
         }
@@ -78,6 +84,11 @@
         color: $color-grey-dark-1;
         box-shadow: inset 0px 0px 0px 2px $color-grey-dark-1;
         transition: all 0.3s;
+
+
+        @media only screen and (max-width:$bp-big) {
+            margin-top: 1.5rem;
+        }
 
         &:hover {
             transform: scale(1.1);

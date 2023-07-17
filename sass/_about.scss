@@ -64,11 +64,11 @@
         left: 46%;
 
         @media only screen and (max-width:$bp-big) {
-            width: 25rem;
+            width: 20rem;
         }
 
         @media only screen and (max-width:$bp-small) {
-            // width: 17rem;
+            width: 17rem;
         }
     }
 
