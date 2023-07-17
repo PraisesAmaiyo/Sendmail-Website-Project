@@ -2,13 +2,18 @@
     background-image: linear-gradient(to right, rgba($color-grey-light-2, 2), rgba($color-grey-light-2, .95));
     grid-column: 1/-1;
     grid-row: about-start/ about-end;
-    padding: 5rem 2rem;
+    padding: 8rem 2rem;
 
     display: grid;
     grid-template-columns: 1fr 900px 1fr;
 
     @media only screen and (max-width:$bp-largest) {
+        grid-template-columns: 100%;
         grid-template-columns: 1fr 100% 1fr;
+    }
+
+    @media only screen and (max-width:$bp-big) {
+        grid-template-columns: 100%;
     }
 
 }
@@ -25,6 +30,11 @@
     text-align: center;
     width: 80%;
 
+    @media only screen and (max-width:$bp-big) {
+        grid-column: 1/-1;
+        width: 95%;
+    }
+
     &-heading {
         font-size: 5rem;
         font-weight: 700;
@@ -33,11 +43,12 @@
         position: relative;
 
         @media only screen and (max-width:$bp-big) {
-            font-size: 4rem;
+            margin-top: 3rem;
+            font-size: 3.5rem;
         }
 
         @media only screen and (max-width:$bp-small) {
-            font-size: 2.5rem;
+            // font-size: 2.5rem;
         }
 
         .about-span {
@@ -53,7 +64,7 @@
         left: 46%;
 
         @media only screen and (max-width:$bp-big) {
-            width: 25rem;
+            width: 20rem;
         }
 
         @media only screen and (max-width:$bp-small) {
@@ -66,19 +77,20 @@
     }
 
     &-text {
+        font-weight: 400;
         margin-top: 5rem;
         padding-bottom: 5rem;
         color: $color-grey-dark-1;
-        font-size: 2rem;
+        font-size: 2.5rem;
 
         @media only screen and (max-width:$bp-big) {
-            font-size: 1.6rem;
-            margin-top: 3rem;
+            font-size: 2.7rem;
+            margin-top: 6rem;
         }
 
-        @media only screen and (max-width:$bp-small) {
-            font-size: 1.4rem;
-            margin-top: 2.5rem;
-        }
+        // @media only screen and (max-width:$bp-small) {
+        //     font-size: 1.8rem;
+        //     margin-top: 2.5rem;
+        // }
     }
 }

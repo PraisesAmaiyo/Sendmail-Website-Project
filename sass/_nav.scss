@@ -2,28 +2,41 @@
     background-image: linear-gradient(to right, rgba($color-primary, 2), rgba($color-primary-light, .93));
     grid-column: 1/-1;
     grid-row: navigation-start/ navigation-end;
-    padding: 2rem;
-    padding-bottom: 0;
-
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 900px 1fr;
 
     @media only screen and (max-width:$bp-largest) {
         grid-template-columns: 1fr 100% 1fr;
-        padding: 2rem 5rem
     }
 }
 
 .navigation {
     grid-column: 2/3;
-
+<<<<<<< HEAD
+    padding: 2rem;
+=======
+    padding: 4rem;
+>>>>>>> b723fcaf8bd73abaea33a4c976d60ab790809eaf
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 1rem;
+<<<<<<< HEAD
+    height: 8rem;
+    position: relative;
+
+    .logo {
+        width: 3.5rem;
+        height: 3.5rem;
+=======
+    height: 10rem;
+    position: relative;
 
     .logo {
         width: 4rem;
-        height: 4rem
+        height: 4rem;
+>>>>>>> b723fcaf8bd73abaea33a4c976d60ab790809eaf
     }
 
     .main-nav-list {
@@ -41,6 +54,10 @@
         font-weight: 400;
         font-size: 1.6rem;
         transition: all 0.3s;
+
+        @media only screen and (max-width:$bp-big) {
+            font-size: 4rem;
+        }
     }
 
     .main-nav-link:hover,
@@ -64,7 +81,15 @@
         transition: all 0.3s;
         border: none;
 
+<<<<<<< HEAD
 
+        @media only screen and (max-width:$bp-big) {
+            font-size: 3.5rem;
+            margin-top: 4rem;
+        }
+
+=======
+>>>>>>> b723fcaf8bd73abaea33a4c976d60ab790809eaf
         &:hover {
             transform: scale(1.1);
         }
@@ -75,6 +100,11 @@
         color: $color-grey-dark-1;
         box-shadow: inset 0px 0px 0px 2px $color-grey-dark-1;
         transition: all 0.3s;
+
+
+        @media only screen and (max-width:$bp-big) {
+            margin-top: 1.5rem;
+        }
 
         &:hover {
             transform: scale(1.1);

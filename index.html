@@ -12,14 +12,16 @@
         href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,600|Nunito:300,300i,400,600&display=swap"
         rel="stylesheet" />
 
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <script src="https://kit.fontawesome.com/d0cbf0cdf0.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script defer src="JS/script.js"></script>
 
     <title>SendMail &mdash; secured mail</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
@@ -45,6 +47,12 @@
                     <li><a class="main-nav-link hero-btn-reg" href="#cta">Register</a></li>
                 </ul>
             </nav>
+
+            <button class="btn-mobile-nav">
+                <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+                <ion-icon class="icon-mobile-nav dark" name="close-outline"></ion-icon>
+            </button>
+
         </div>
     </header>
 
@@ -65,14 +73,6 @@
                 </div>
 
                 <div class="delivered-emails">
-                    <div class="delivered-imgs">
-                        <img src="img/customer-1.jpg" alt="customer photo" />
-                        <img src="img/customer-2.jpg" alt="customer photo" />
-                        <img src="img/customer-3.jpg" alt="customer photo" />
-                        <img src="img/customer-4.jpg" alt="customer photo" />
-                        <img src="img/customer-5.jpg" alt="customer photo" />
-                        <img src="img/customer-6.jpg" alt="customer photo" />
-                    </div>
                     <p class="delivered-text">Over
                         <span>650,000</span> mails delivered this year!
                     </p>
@@ -193,7 +193,47 @@
         </div>
     </div>
 
+    <footer class="section-footer">
+        <div class="footer">
+            <div class="footer-image">
+                <div class="footer-text">SendMail</div>
+                <a href="#">
+                    <img class="footer-logo" alt="SendMail logo" src="img/favicon.png" />
+                </a>
+            </div>
 
+            <nav class="footer-link">
+                <ul class="footer-nav-list">
+                    <li><a class="footer-nav-link" href="#home">Home</a></li>
+                    <li><a class="footer-nav-link" href="#about">About</a></li>
+                    <li>
+                        <a class="footer-nav-link" href="#features">Features</a>
+                    </li>
+                    <li><a class="footer-nav-link" href="#blog">Blog</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-socials">
+                <a href="#" class="social">
+                    <i class="fa-brands fa-facebook-f a"></i>
+                    <i class="fa-brands fa-facebook b"></i>
+                </a>
+                <a href="#" class="social">
+                    <i class="fa-brands fa-twitter a"></i>
+                    <i class="fa-brands fa-square-twitter b"></i>
+                </a>
+                <a href="#" class="social">
+                    <i class="fa-regular fa-envelope a"></i>
+                    <i class="fa-solid fa-envelope b"></i>
+                </a>
+                <a href="#" class="social">
+                    <i class="fa-brands fa-linkedin-in a"></i>
+                    <i class="fa-brands fa-linkedin b"></i>
+                </a>
+            </div>
+        </div>
+
+    </footer>
 </body>
 
 </html>
