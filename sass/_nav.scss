@@ -2,28 +2,28 @@
     background-image: linear-gradient(to right, rgba($color-primary, 2), rgba($color-primary-light, .93));
     grid-column: 1/-1;
     grid-row: navigation-start/ navigation-end;
-    padding: 2rem;
-    padding-bottom: 0;
-
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 900px 1fr;
 
     @media only screen and (max-width:$bp-largest) {
         grid-template-columns: 1fr 100% 1fr;
-        padding: 2rem 5rem
     }
 }
 
 .navigation {
     grid-column: 2/3;
-
+    padding: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 1rem;
+    height: 10rem;
+    position: relative;
 
     .logo {
         width: 4rem;
-        height: 4rem
+        height: 4rem;
     }
 
     .main-nav-list {
@@ -41,6 +41,10 @@
         font-weight: 400;
         font-size: 1.6rem;
         transition: all 0.3s;
+
+        @media only screen and (max-width:$bp-big) {
+            font-size: 4rem;
+        }
     }
 
     .main-nav-link:hover,
@@ -63,7 +67,6 @@
         margin-right: 0rem;
         transition: all 0.3s;
         border: none;
-
 
         &:hover {
             transform: scale(1.1);

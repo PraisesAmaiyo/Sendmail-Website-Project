@@ -1,0 +1,119 @@
+.section-footer {
+    background-image: linear-gradient(to right, rgba($color-grey-dark-2, .93), rgba($color-grey-dark-3, .93));
+    grid-column: 1/-1;
+    grid-row: footer-start/ footer-end;
+    padding: 5rem 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 900px 1fr;
+
+    @media only screen and (max-width:$bp-largest) {
+        grid-template-columns: 1fr 100% 1fr;
+    }
+}
+
+.footer {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+
+
+    @media only screen and (max-width:$bp-larger) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 3rem;
+        padding: 0 6rem;
+    }
+
+    @media only screen and (max-width:$bp-medium) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 3rem;
+        padding: 0 6rem;
+    }
+
+    &-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        @media only screen and (max-width:$bp-larger) {
+            grid-column: 1/-1;
+        }
+    }
+
+    &-text {
+
+        font-size: 2.5rem;
+        color: $color-secondary-light;
+        transition: all 1s;
+
+        &:hover {
+            color: $color-grey-light-1;
+            transform: scale(1.1);
+        }
+    }
+
+    &-logo {
+        width: 4rem;
+        height: 4rem;
+
+        &:hover {
+            color: $color-grey-light-1;
+            transform: scale(1.1);
+        }
+    }
+
+    &-nav-list {
+        list-style: none;
+        display: flex;
+        gap: 2.5rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-nav-link:link,
+    &-nav-link:visited {
+        display: inline-block;
+        text-decoration: none;
+        color: $color-secondary-light;
+        font-weight: 500;
+        font-size: 2rem;
+    }
+
+    &-nav-link:hover,
+    &-nav-link:active {
+        color: $color-grey-light-1;
+        transform: scale(1.1);
+    }
+
+    &-socials {
+        display: grid;
+        grid-template-columns: repeat(4, 5rem);
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        .social {
+            font-size: 2.5rem;
+            color: $color-grey-light-1;
+            text-decoration: none;
+        }
+    }
+}
+
+.social:hover .a,
+.social .b {
+    display: none;
+}
+
+.social:hover .b {
+    display: inline;
+    font-size: 3.5rem;
+}
