@@ -1,5 +1,5 @@
 .section-footer {
-    background-image: linear-gradient(to right, rgba($color-grey-dark-2, .93), rgba($color-grey-dark-3, .93));
+    background-image: linear-gradient(to right, rgba($color-primary, 2), rgba($color-primary-light, 1));
     grid-column: 1/-1;
     grid-row: footer-start/ footer-end;
     padding: 5rem 2rem;
@@ -9,6 +9,12 @@
 
     @media only screen and (max-width:$bp-largest) {
         grid-template-columns: 1fr 100% 1fr;
+        padding: 4rem 2rem;
+    }
+
+
+    @media only screen and (max-width:$bp-big) {
+        padding: 2.5rem 1rem 1.5rem 1rem;
     }
 }
 
@@ -16,7 +22,7 @@
     grid-column: 2/3;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 20rem;
+    grid-template-rows: 1fr;
     justify-content: center;
     align-items: center;
     text-align: center;

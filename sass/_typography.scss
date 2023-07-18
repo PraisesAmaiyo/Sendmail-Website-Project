@@ -1,0 +1,55 @@
+.hero-btn-dark,
+.hero-btn-light {
+    background-color: $color-grey-dark-1;
+    color: $color-grey-light-1;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: $font-primary;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 1.2rem 2rem;
+    border-radius: 5rem;
+    transition: all 0.5s;
+    border: none;
+    box-shadow: inset 0 0 0 1px $color-secondary-light;
+
+    &:not(:last-child) {
+        margin-right: 1.5rem;
+
+        @media only screen and (max-width:$bp-largest) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    @media only screen and (max-width:$bp-largest) {
+        font-size: 1.4rem;
+    }
+
+    @media only screen and (max-width:$bp-larger) {
+        font-size: 1.2rem;
+    }
+
+    @media only screen and (max-width:$bp-big) {
+        font-size: 2.4rem;
+    }
+
+    @media only screen and (max-width:$bp-medium) {
+        // font-size: 1.4rem;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.hero-btn-light {
+    background-color: #fff;
+    color: $color-grey-dark-1;
+    box-shadow: inset 0px 0px 0px 2px $color-grey-dark-1;
+    transition: all 0.5s;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: $color-secondary-light;
+    }
+}

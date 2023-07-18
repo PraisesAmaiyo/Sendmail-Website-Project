@@ -2,10 +2,9 @@
 $color-primary: #265ca5;
 $color-primary-light: #2b5c9d;
 
-$color-secondary-dark: #22b6d8;
 $color-secondary-light: #d4deed;
+$color-secondary-dark: #22b6d8;
 
-// $color-grey-light-1: #f25c05;
 $color-grey-light-1: #fff;
 $color-grey-light-2: #eef1f6;
 
@@ -64,7 +63,7 @@ body {
 .container {
     overflow-x: hidden;
     display: grid;
-    grid-template-rows: [navigation-start] max-content [navigation-end header-start] 1fr[header-end about-start] max-content [about-end featured-start] max-content [featured-end footer-start] min-content [footer-end];
+    grid-template-rows: [navigation-start] max-content [navigation-end header-start] 1fr[header-end about-start] max-content [about-end featured-start] max-content [featured-end registration-start] max-content [registration-end footer-start] min-content [footer-end];
 
     grid-template-columns: 1fr repeat(6, [col-start] minmax(min-content, 14rem)[col-end]) 1fr;
 

@@ -4,7 +4,7 @@
     grid-row: navigation-start/ navigation-end;
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 900px 1fr;
+    grid-template-columns: 1fr 110rem 1fr;
 
     @media only screen and (max-width:$bp-largest) {
         grid-template-columns: 1fr 100% 1fr;
@@ -49,50 +49,24 @@
 
     .main-nav-link:hover,
     .main-nav-link:active {
-        color: $color-secondary-light;
         transform: scale(1.1);
     }
 
-    .main-nav-link.hero-btn-login,
-    .main-nav-link.hero-btn-reg {
-        background-color: $color-grey-dark-1;
-        color: #fff;
-        font-size: 1.6rem;
-        font-weight: 500;
-        font-family: $font-primary;
-        text-transform: uppercase;
-        cursor: pointer;
-        padding: 1rem 1.8rem;
-        border-radius: 5rem;
-        margin-right: 0rem;
-        transition: all 0.3s;
-        border: none;
-
+    .main-nav-link.hero-btn-dark,
+    .main-nav-link.hero-btn-light {
 
         @media only screen and (max-width:$bp-big) {
             font-size: 3.5rem;
             margin-top: 4rem;
         }
 
-        &:hover {
-            transform: scale(1.1);
-        }
     }
 
-    .main-nav-link.hero-btn-reg {
-        background-color: #fff;
+    .main-nav-link.hero-btn-light {
         color: $color-grey-dark-1;
-        box-shadow: inset 0px 0px 0px 2px $color-grey-dark-1;
-        transition: all 0.3s;
-
 
         @media only screen and (max-width:$bp-big) {
             margin-top: 1.5rem;
-        }
-
-        &:hover {
-            transform: scale(1.1);
-            background-color: $color-secondary-light;
         }
     }
 }

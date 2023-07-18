@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 *,
 *::before,
 *::after {
@@ -28,8 +29,54 @@ body {
 .container {
   overflow-x: hidden;
   display: grid;
-  grid-template-rows: [navigation-start] max-content [navigation-end header-start] 1fr [header-end about-start] max-content [about-end featured-start] max-content [featured-end footer-start] min-content [footer-end];
+  grid-template-rows: [navigation-start] max-content [navigation-end header-start] 1fr [header-end about-start] max-content [about-end featured-start] max-content [featured-end registration-start] max-content [registration-end footer-start] min-content [footer-end];
   grid-template-columns: 1fr repeat(6, [col-start] minmax(min-content, 14rem) [col-end]) 1fr; }
+
+.hero-btn-dark,
+.hero-btn-light {
+  background-color: #12468a;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 1.2rem 2rem;
+  border-radius: 5rem;
+  transition: all 0.5s;
+  border: none;
+  box-shadow: inset 0 0 0 1px #d4deed; }
+  .hero-btn-dark:not(:last-child),
+  .hero-btn-light:not(:last-child) {
+    margin-right: 1.5rem; }
+    @media only screen and (max-width: 75em) {
+      .hero-btn-dark:not(:last-child),
+      .hero-btn-light:not(:last-child) {
+        margin-bottom: 1.5rem; } }
+  @media only screen and (max-width: 75em) {
+    .hero-btn-dark,
+    .hero-btn-light {
+      font-size: 1.4rem; } }
+  @media only screen and (max-width: 62.5em) {
+    .hero-btn-dark,
+    .hero-btn-light {
+      font-size: 1.2rem; } }
+  @media only screen and (max-width: 50.3em) {
+    .hero-btn-dark,
+    .hero-btn-light {
+      font-size: 2.4rem; } }
+  .hero-btn-dark:hover,
+  .hero-btn-light:hover {
+    transform: scale(1.1); }
+
+.hero-btn-light {
+  background-color: #fff;
+  color: #12468a;
+  box-shadow: inset 0px 0px 0px 2px #12468a;
+  transition: all 0.5s; }
+  .hero-btn-light:hover {
+    transform: scale(1.1);
+    background-color: #d4deed; }
 
 .sticky .navigation-header {
   position: fixed;
@@ -54,7 +101,7 @@ body {
   grid-row: header-start/ header-end;
   padding: 4rem;
   display: grid;
-  grid-template-columns: 1fr 900px 1fr; }
+  grid-template-columns: 1fr 110rem 1fr; }
   @media only screen and (max-width: 75em) {
     .section-hero {
       grid-template-columns: 1fr 100% 1fr; } }
@@ -138,43 +185,6 @@ body {
       .hero-btn-text {
         font-weight: 400;
         margin-bottom: 2rem; } }
-  .hero-btn-login, .hero-btn-reg {
-    background-color: #12468a;
-    color: #fff;
-    font-size: 1.6rem;
-    font-weight: 600;
-    font-family: "Montserrat", sans-serif;
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 1.2rem 2rem;
-    border-radius: 5rem;
-    transition: all 0.5s;
-    border: none;
-    box-shadow: inset 0 0 0 1px #d4deed; }
-    .hero-btn-login:not(:last-child), .hero-btn-reg:not(:last-child) {
-      margin-right: 1.5rem; }
-      @media only screen and (max-width: 75em) {
-        .hero-btn-login:not(:last-child), .hero-btn-reg:not(:last-child) {
-          margin-bottom: 1.5rem; } }
-    @media only screen and (max-width: 75em) {
-      .hero-btn-login, .hero-btn-reg {
-        font-size: 1.4rem; } }
-    @media only screen and (max-width: 62.5em) {
-      .hero-btn-login, .hero-btn-reg {
-        font-size: 1.2rem; } }
-    @media only screen and (max-width: 50.3em) {
-      .hero-btn-login, .hero-btn-reg {
-        font-size: 2.4rem; } }
-    .hero-btn-login:hover, .hero-btn-reg:hover {
-      transform: scale(1.1); }
-  .hero-btn-reg {
-    background-color: #fff;
-    color: #12468a;
-    box-shadow: inset 0px 0px 0px 2px #12468a;
-    transition: all 0.5s; }
-    .hero-btn-reg:hover {
-      transform: scale(1.1);
-      background-color: #d4deed; }
   @media only screen and (max-width: 50.3em) {
     .hero-image {
       text-align: center;
@@ -433,6 +443,109 @@ body {
         .feature .featured-group-text {
           font-weight: 500; } }
 
+.section-registration {
+  background-image: linear-gradient(to right, #eef1f6, rgba(238, 241, 246, 0.95));
+  grid-column: 1/-1;
+  grid-row: registration-start/ registration-end;
+  padding: 8rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 900px 1fr; }
+  @media only screen and (max-width: 75em) {
+    .section-registration {
+      grid-template-columns: 100%;
+      grid-template-columns: 1fr 100% 1fr; } }
+  @media only screen and (max-width: 50.3em) {
+    .section-registration {
+      grid-template-columns: 100%; } }
+  .section-registration .registration {
+    grid-column: 2/3;
+    margin: 0 auto;
+    background-image: linear-gradient(to right, #265ca5, rgba(43, 92, 157, 0.93));
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+    @media only screen and (max-width: 50.3em) {
+      .section-registration .registration {
+        grid-column: 1/-1; } }
+    .section-registration .registration-cta {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr; }
+      @media only screen and (max-width: 50.3em) {
+        .section-registration .registration-cta {
+          grid-template-columns: 1fr; } }
+      .section-registration .registration-cta-text_box {
+        padding: 4.8rem 6.4rem 6.4rem 6.4rem; }
+        @media only screen and (max-width: 50.3em) {
+          .section-registration .registration-cta-text_box {
+            grid-row: 2/3;
+            margin-top: 2rem;
+            padding: 4.8rem 3.4rem 6.4rem 3.4rem; } }
+      .section-registration .registration-cta-image {
+        background-image: linear-gradient(to right, rgba(38, 92, 165, 0.35), rgba(43, 92, 157, 0.35)), url(../img/hero-image.svg);
+        background-size: cover;
+        background-position: center; }
+        @media only screen and (max-width: 50.3em) {
+          .section-registration .registration-cta-image {
+            grid-row: 1/2;
+            height: 32rem; } }
+    .section-registration .registration-heading {
+      position: relative;
+      font-size: 3rem;
+      font-weight: 600;
+      color: #fff; }
+    .section-registration .registration-form {
+      margin-top: 3rem; }
+      .section-registration .registration-form_input {
+        height: 6rem;
+        margin: 3rem 0; }
+        .section-registration .registration-form_input input {
+          height: 100%;
+          width: 100%;
+          outline: none;
+          padding: 1.5rem 2rem;
+          font-size: 2.5rem;
+          font-family: inherit;
+          font-weight: 500;
+          color: #265ca5;
+          border: none;
+          background-color: #e9eff6;
+          border-radius: 9px;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease; }
+          .section-registration .registration-form_input input:focus, .section-registration .registration-form_input input:valid {
+            background-color: #fff;
+            box-shadow: 0 0 0 0.8rem rgba(212, 222, 237, 0.36); }
+      .section-registration .registration-form_policy {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2.5rem; }
+        .section-registration .registration-form_policy .policy-text {
+          color: #fff;
+          font-size: 2rem;
+          font-weight: 500;
+          margin-left: 10px; }
+      .section-registration .registration-form .hero-btn-dark:hover {
+        transform: translateX(2rem) scale(1.06); }
+      .section-registration .registration-form-user_login {
+        font-size: 2rem;
+        color: #fff;
+        text-align: left;
+        font-weight: 400; }
+        .section-registration .registration-form-user_login-link {
+          color: #22b6d8;
+          text-decoration: none;
+          font-size: 2.5rem;
+          font-weight: 600; }
+          .section-registration .registration-form-user_login-link:hover {
+            text-decoration: underline;
+            text-decoration-color: #fff; }
+
 .section-about {
   background-image: linear-gradient(to right, #eef1f6, rgba(238, 241, 246, 0.95));
   grid-column: 1/-1;
@@ -506,7 +619,7 @@ body {
   grid-row: navigation-start/ navigation-end;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 900px 1fr; }
+  grid-template-columns: 1fr 110rem 1fr; }
   @media only screen and (max-width: 75em) {
     .navigation-header {
       grid-template-columns: 1fr 100% 1fr; } }
@@ -542,44 +655,20 @@ body {
         font-size: 4rem; } }
   .navigation .main-nav-link:hover,
   .navigation .main-nav-link:active {
-    color: #d4deed;
     transform: scale(1.1); }
-  .navigation .main-nav-link.hero-btn-login,
-  .navigation .main-nav-link.hero-btn-reg {
-    background-color: #12468a;
-    color: #fff;
-    font-size: 1.6rem;
-    font-weight: 500;
-    font-family: "Montserrat", sans-serif;
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 1rem 1.8rem;
-    border-radius: 5rem;
-    margin-right: 0rem;
-    transition: all 0.3s;
-    border: none; }
+  @media only screen and (max-width: 50.3em) {
+    .navigation .main-nav-link.hero-btn-dark,
+    .navigation .main-nav-link.hero-btn-light {
+      font-size: 3.5rem;
+      margin-top: 4rem; } }
+  .navigation .main-nav-link.hero-btn-light {
+    color: #12468a; }
     @media only screen and (max-width: 50.3em) {
-      .navigation .main-nav-link.hero-btn-login,
-      .navigation .main-nav-link.hero-btn-reg {
-        font-size: 3.5rem;
-        margin-top: 4rem; } }
-    .navigation .main-nav-link.hero-btn-login:hover,
-    .navigation .main-nav-link.hero-btn-reg:hover {
-      transform: scale(1.1); }
-  .navigation .main-nav-link.hero-btn-reg {
-    background-color: #fff;
-    color: #12468a;
-    box-shadow: inset 0px 0px 0px 2px #12468a;
-    transition: all 0.3s; }
-    @media only screen and (max-width: 50.3em) {
-      .navigation .main-nav-link.hero-btn-reg {
+      .navigation .main-nav-link.hero-btn-light {
         margin-top: 1.5rem; } }
-    .navigation .main-nav-link.hero-btn-reg:hover {
-      transform: scale(1.1);
-      background-color: #d4deed; }
 
 .section-footer {
-  background-image: linear-gradient(to right, rgba(32, 44, 108, 0.93), rgba(7, 21, 92, 0.93));
+  background-image: linear-gradient(to right, #265ca5, #2b5c9d);
   grid-column: 1/-1;
   grid-row: footer-start/ footer-end;
   padding: 5rem 2rem;
@@ -587,13 +676,17 @@ body {
   grid-template-columns: 1fr 900px 1fr; }
   @media only screen and (max-width: 75em) {
     .section-footer {
-      grid-template-columns: 1fr 100% 1fr; } }
+      grid-template-columns: 1fr 100% 1fr;
+      padding: 4rem 2rem; } }
+  @media only screen and (max-width: 50.3em) {
+    .section-footer {
+      padding: 2.5rem 1rem 1.5rem 1rem; } }
 
 .footer {
   grid-column: 2/3;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 20rem;
+  grid-template-rows: 1fr;
   justify-content: center;
   align-items: center;
   text-align: center;

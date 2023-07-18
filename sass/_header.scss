@@ -6,7 +6,7 @@
     grid-row: header-start/ header-end;
     padding: 4rem;
     display: grid;
-    grid-template-columns: 1fr 900px 1fr;
+    grid-template-columns: 1fr 110rem 1fr;
 
     @media only screen and (max-width:$bp-largest) {
         grid-template-columns: 1fr 100% 1fr;
@@ -103,88 +103,29 @@
         }
     }
 
-    &-btn {
+    &-btn-text {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $color-grey-light-2;
+        margin: 1rem 0 2rem 0;
 
-        &-text {
-            font-size: 1.4rem;
-            font-weight: 500;
-            color: $color-grey-light-2;
-            margin: 1rem 0 2rem 0;
-
-            @media only screen and (max-width:$bp-big) {
-                font-size: 3rem;
-                text-align: center;
-                margin: 2rem 0 1rem 0;
-                text-align: center;
-                display: grid;
-                justify-content: center;
-            }
-
-            @media only screen and (max-width:$bp-medium) {
-                // font-size: 2rem;
-                font-weight: 400;
-                margin-bottom: 2rem;
-            }
-
-            @media only screen and (max-width:$bp-small) {
-                // font-size: 1.5rem;
-            }
+        @media only screen and (max-width:$bp-big) {
+            font-size: 3rem;
+            text-align: center;
+            margin: 2rem 0 1rem 0;
+            text-align: center;
+            display: grid;
+            justify-content: center;
         }
 
-        &-login,
-        &-reg {
-            background-color: $color-grey-dark-1;
-            color: $color-grey-light-1;
-            font-size: 1.6rem;
-            font-weight: 600;
-            font-family: $font-primary;
-            text-transform: uppercase;
-            cursor: pointer;
-            padding: 1.2rem 2rem;
-            border-radius: 5rem;
-            transition: all 0.5s;
-            border: none;
-            box-shadow: inset 0 0 0 1px $color-secondary-light;
-
-            &:not(:last-child) {
-                margin-right: 1.5rem;
-
-                @media only screen and (max-width:$bp-largest) {
-                    margin-bottom: 1.5rem;
-                }
-            }
-
-            @media only screen and (max-width:$bp-largest) {
-                font-size: 1.4rem;
-            }
-
-            @media only screen and (max-width:$bp-larger) {
-                font-size: 1.2rem;
-            }
-
-            @media only screen and (max-width:$bp-big) {
-                font-size: 2.4rem;
-            }
-
-            @media only screen and (max-width:$bp-medium) {
-                // font-size: 1.4rem;
-            }
-
-            &:hover {
-                transform: scale(1.1);
-            }
+        @media only screen and (max-width:$bp-medium) {
+            // font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
         }
 
-        &-reg {
-            background-color: #fff;
-            color: $color-grey-dark-1;
-            box-shadow: inset 0px 0px 0px 2px $color-grey-dark-1;
-            transition: all 0.5s;
-
-            &:hover {
-                transform: scale(1.1);
-                background-color: $color-secondary-light;
-            }
+        @media only screen and (max-width:$bp-small) {
+            // font-size: 1.5rem;
         }
     }
 
