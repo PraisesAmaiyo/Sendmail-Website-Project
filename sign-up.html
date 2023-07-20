@@ -68,20 +68,25 @@
                     </h2>
 
                     <form class="registration-form" name="sign-up" netlify>
+
                         <div class="registration-form_input">
-                            <input type="text" name="name" placeholder="Enter your name" required>
+                            <label for="full-name">Full Name</label>
+                            <input id="full-name" type="text" placeholder="Full name" name="name" required>
                         </div>
 
                         <div class="registration-form_input">
-                            <input type="text" name="email" placeholder="Enter your email" required>
+                            <label for="email ">Email Address</label>
+                            <input id="email" type="text" placeholder="example.gmail.com" name='email' required>
                         </div>
 
                         <div class="registration-form_input">
-                            <input type="password" name="password" placeholder="Create password" required>
+                            <label for="password">Create Password</label>
+                            <input id="password" type="password" placeholder="Create password" name="password" required>
                         </div>
 
                         <div class="registration-form_input">
-                            <input type="password" name="password" placeholder="Confirm password" required>
+                            <label for="password">Confirm Password</label>
+                            <input id="confirm-password" type="password" placeholder="Confirm password" required>
                         </div>
 
                         <div class="registration-form_policy">
@@ -90,14 +95,13 @@
                                     Conditions</a></h3>
                         </div>
 
-                        <button class="hero-btn-dark">Sign Up <span>&#8594</span></button>
+                        <button class="hero-btn-dark">Sign Up now</button>
 
                         <div class="registration-form_user">
-                            <h3 class="registration-form-user_login">Already have an account? <a href="#"
+                            <h3 class="registration-form-user_login">Already have an account? <a href="/index.html"
                                     class="registration-form-user_login-link"> &nbsp Login now </a>
                             </h3>
                         </div>
-
                     </form>
                 </div>
 

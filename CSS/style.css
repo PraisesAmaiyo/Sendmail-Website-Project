@@ -578,8 +578,16 @@ body {
     .section-registration .registration-form {
       margin-top: 3rem; }
       .section-registration .registration-form_input {
-        height: 6rem;
-        margin: 3rem 0; }
+        height: 5rem;
+        margin: 7rem 0; }
+        .section-registration .registration-form_input label {
+          display: block;
+          padding-left: 2rem;
+          text-align: left;
+          font-size: 2rem;
+          font-weight: 500;
+          margin-bottom: 1.2rem;
+          color: #fff; }
         .section-registration .registration-form_input input {
           height: 100%;
           width: 100%;
