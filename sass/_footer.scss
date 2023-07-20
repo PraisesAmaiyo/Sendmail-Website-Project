@@ -5,7 +5,7 @@
     padding: 5rem 2rem;
 
     display: grid;
-    grid-template-columns: 1fr 900px 1fr;
+    grid-template-columns: 1fr 100rem 1fr;
 
     @media only screen and (max-width:$bp-largest) {
         grid-template-columns: 1fr 100% 1fr;
@@ -62,12 +62,10 @@
 
         &:hover {
             color: $color-grey-light-1;
-            transform: scale(1.1);
         }
     }
 
     &-logo {
-        width: 4rem;
         height: 4rem;
 
         &:hover {
@@ -91,12 +89,30 @@
         color: $color-secondary-light;
         font-weight: 500;
         font-size: 2rem;
+        position: relative;
+
+        &::before {
+            transition: all .3s;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            content: '';
+            height: 1px;
+            width: 0px;
+            background-color: $color-grey-light-1;
+        }
     }
 
     &-nav-link:hover,
     &-nav-link:active {
         color: $color-grey-light-1;
+        // text-decoration: underline;
         transform: scale(1.1);
+
+        &::before {
+            width: 100%;
+        }
     }
 
     &-socials {

@@ -2,28 +2,16 @@
     background-image: linear-gradient(to right, rgba($color-primary, 2), rgba($color-primary-light, .93));
     grid-column: 1/-1;
     grid-row: navigation-start/ navigation-end;
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 110rem 1fr;
 
-    @media only screen and (max-width:$bp-largest) {
-        grid-template-columns: 1fr 100% 1fr;
-    }
-}
-
-.navigation {
-    grid-column: 2/3;
-    padding: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
-    height: 8rem;
     position: relative;
+    height: 9.6rem;
+    padding: 0 3rem;
 
     .logo {
-        width: 3.5rem;
-        height: 3.5rem;
+        height: 4rem;
     }
 
     .main-nav-list {
@@ -39,8 +27,18 @@
         text-decoration: none;
         color: $color-grey-light-1;
         font-weight: 400;
-        font-size: 1.6rem;
-        transition: all 0.3s;
+        font-size: 1.8rem;
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            content: '';
+            height: 1px;
+            width: 0px;
+            background-color: $color-grey-light-1;
+        }
 
         @media only screen and (max-width:$bp-big) {
             font-size: 4rem;
@@ -50,16 +48,23 @@
     .main-nav-link:hover,
     .main-nav-link:active {
         transform: scale(1.1);
+
+        &::before {
+            transition: .3s;
+            width: 100%;
+        }
     }
 
-    .main-nav-link.hero-btn-dark,
-    .main-nav-link.hero-btn-light {
+    .hero-btn-dark,
+    .hero-btn-light {
+        font-size: 1.8rem;
+        padding: 1rem;
+        margin-right: 0;
 
         @media only screen and (max-width:$bp-big) {
             font-size: 3.5rem;
             margin-top: 4rem;
         }
-
     }
 
     .main-nav-link.hero-btn-light {
@@ -69,4 +74,22 @@
             margin-top: 1.5rem;
         }
     }
+}
+
+.sticky .navigation-header {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-image: linear-gradient(to right, rgba($color-primary, 2), rgba($color-primary-light, .93));
+    z-index: 999;
+    box-shadow: 0 1.2rem 3.2rem rgba(38, 93, 165, 0.388);
+}
+
+.sticky .section-hero,
+.sticky .section-registration {
+    margin-top: 8rem;
 }

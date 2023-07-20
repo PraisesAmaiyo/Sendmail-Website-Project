@@ -1,10 +1,38 @@
 const btnNavEl = document.querySelector('.btn-mobile-nav');
-const headerEl = document.querySelector('.navigation');
-const stickyNavEl = document.querySelector('.navigation');
+const headerEl = document.querySelector('.navigation-header');
+const allLinks = document.querySelectorAll('a:link');
+const sectionHeroEl = document.querySelector('.section-hero');
+const sectionRegEl = document.querySelector('.section-registration');
+// const sectionHeroEl = document.querySelector('.section-hero');
 
 // Mobile nav
 btnNavEl.addEventListener('click', function () {
   headerEl.classList.toggle('nav-open');
+});
+
+allLinks.forEach(function (link) {
+  link.addEventListener('click', function (e) {
+    const href = link.getAttribute('href');
+    console.log(href);
+
+    // scroll back to top
+    if (href === '#')
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+
+    // Scroll to other links
+    if (href !== '#' && href.startsWith('#')) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: 'smooth' });
+      e.preventDefault();
+    }
+
+    // CLose mobile navigation
+    if (link.classList.contains('main-nav-link'))
+      headerEl.classList.toggle('nav-open');
+  });
 });
 
 // Sticky nav bar
@@ -25,7 +53,7 @@ const obs = new IntersectionObserver(
     // In the viewport
     root: null,
     threshold: 0,
-    rootMargin: '-80px',
+    rootMargin: '-1000px',
   }
 );
-obs.observe(stickyNavEl);
+obs.observe(headerEl);

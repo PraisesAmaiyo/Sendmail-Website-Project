@@ -1,42 +1,30 @@
 .section-hero {
-    background-image: linear-gradient(to right, rgba($color-primary, 2), rgba($color-primary-light, .93)), url(../img/hero-image.svg);
+    background-image: linear-gradient(to right, rgba($color-primary, .9), rgba($color-primary-light, .53)), url(../img/email-secure.jpg);
     background-size: cover;
     background-position: center;
     grid-column: 1/-1;
     grid-row: header-start/ header-end;
-    padding: 4rem;
     display: grid;
-    grid-template-columns: 1fr 110rem 1fr;
+    grid-template-rows: 80vh;
+    padding: 6rem 4rem;
 
-    @media only screen and (max-width:$bp-largest) {
-        grid-template-columns: 1fr 100% 1fr;
-    }
 
     @media only screen and (max-width:$bp-big) {
-        grid-template-rows: 100%;
+        grid-template-rows: 85vh;
     }
 }
 
 .hero {
-    grid-column: 2/3;
-
+    grid-column: 1/-1;
+    text-align: center;
     display: grid;
-    grid-template-columns: 45% 55%;
+    grid-template-columns: 80vw;
     gap: 1.5rem;
     align-items: center;
     justify-content: center;
-    padding-top: 2rem;
-
-
-    @media only screen and (max-width:$bp-larger) {
-        grid-template-columns: repeat(2, 50%);
-    }
 
     @media only screen and (max-width:$bp-big) {
-        grid-template-columns: 1fr;
-        grid-template-rows: 70vh max-content;
         margin-top: 3rem;
-        padding: 9rem 0;
     }
 
     &-text {
@@ -47,23 +35,24 @@
         }
 
         &-main {
-            font-size: 5.2rem;
+            font-size: 8.5rem;
             line-height: 1.1;
             font-weight: 700;
             color: $color-grey-light-1;
             margin-bottom: 2.5rem;
 
             @media only screen and (max-width:$bp-larger) {
-                font-size: 4.4rem;
+                font-size: 6.5rem;
             }
 
             @media only screen and (max-width:$bp-big) {
-                font-size: 8.5rem;
+                font-size: 6rem;
                 margin-bottom: 1.5rem;
                 grid-row: 1/2;
             }
 
             @media only screen and (max-width:$bp-medium) {
+                font-size: 7rem;
                 margin-bottom: 2rem;
             }
 
@@ -73,59 +62,61 @@
         }
 
         &-mini {
-            font-size: 2rem;
+            font-size: 4rem;
             line-height: 1.2;
             font-weight: 500;
             color: $color-grey-light-2;
 
-            @media only screen and (max-width:$bp-largest) {
-                font-size: 1.85rem;
-            }
-
             @media only screen and (max-width:$bp-larger) {
-                font-size: 1.6rem;
+                font-size: 3.8rem;
             }
 
             @media only screen and (max-width:$bp-big) {
-                font-size: 4rem;
+                font-size: 3rem;
             }
 
             @media only screen and (max-width:$bp-medium) {
-                // font-size: 2.8rem;
+                font-size: 3rem;
                 padding-bottom: 2rem;
             }
 
             @media only screen and (max-width:$bp-small) {
-                // font-size: 2rem;
+                // font-size: 2.5rem;
                 font-weight: 400;
                 padding-bottom: 2rem;
             }
         }
     }
 
-    &-btn-text {
-        font-size: 1.4rem;
-        font-weight: 500;
-        color: $color-grey-light-2;
-        margin: 1rem 0 2rem 0;
+    &-btn {
+        &-text {
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: $color-grey-light-2;
+            margin: 1rem 0 2rem 0;
 
-        @media only screen and (max-width:$bp-big) {
-            font-size: 3rem;
-            text-align: center;
-            margin: 2rem 0 1rem 0;
-            text-align: center;
-            display: grid;
-            justify-content: center;
+            @media only screen and (max-width:$bp-big) {
+                font-size: 2.2rem;
+                text-align: center;
+                margin: 2rem 0 1rem 0;
+                text-align: center;
+                display: grid;
+                justify-content: center;
+            }
+
+            @media only screen and (max-width:$bp-medium) {
+                font-size: 2.3rem;
+                font-weight: 400;
+                margin-bottom: 2rem;
+            }
+
+            @media only screen and (max-width:$bp-small) {
+                // font-size: 1.5rem;
+            }
         }
 
-        @media only screen and (max-width:$bp-medium) {
-            // font-size: 2rem;
-            font-weight: 400;
-            margin-bottom: 2rem;
-        }
-
-        @media only screen and (max-width:$bp-small) {
-            // font-size: 1.5rem;
+        &-dark {
+            margin-right: 1.5rem;
         }
     }
 
@@ -156,6 +147,7 @@
 
 .delivered-emails {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 1.6rem;
 
@@ -170,6 +162,7 @@
         font-size: 1.4rem;
         font-weight: 600;
         color: $color-secondary-light ;
+        margin-top: 1.5rem;
 
         @media only screen and (max-width:$bp-larger) {
             font-size: 1.5rem;

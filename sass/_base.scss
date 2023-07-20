@@ -20,8 +20,8 @@ $font-display: 'Josefin Sans', sans-serif;
 // RESPONSIVE VARIABLES
 $bp-largest: 75em; //
 $bp-larger: 62.5em; //
-$bp-large: 55.7em; //
 $bp-big: 50.3em; //
+$bp-large: 45.7em; //
 $bp-medium: 38.6em; //
 $bp-small: 30.5em; //
 $bp-smaller: 20.8em; //
@@ -55,7 +55,7 @@ html {
 body {
     font-family: $font-primary;
     font-display: swap;
-    color: $color-grey-dark-2;
+    color: $color-primary;
     font-weight: 300;
     line-height: 1.4;
 }
@@ -63,19 +63,7 @@ body {
 .container {
     overflow-x: hidden;
     display: grid;
-    grid-template-rows: [navigation-start] max-content [navigation-end header-start] 1fr[header-end about-start] max-content [about-end featured-start] max-content [featured-end registration-start] max-content [registration-end footer-start] min-content [footer-end];
+    grid-template-rows: [navigation-start] max-content [navigation-end header-start] 1fr[header-end about-start] max-content [about-end featured-start] max-content [featured-end pricing-start] max-content [pricing-end footer-start] min-content [footer-end];
 
     grid-template-columns: 1fr repeat(6, [col-start] minmax(min-content, 14rem)[col-end]) 1fr;
-
-    // @media only screen and (max-width:$bp-large) {
-    //     // grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
-    //     // overflow-x: auto;
-    // }
-
-    //     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-    // }
-
-    // @media only screen and (max-width:$bp-medium) {
-    //     grid-template-rows: 6rem calc(100vh - 6rem);
-    // }
 }

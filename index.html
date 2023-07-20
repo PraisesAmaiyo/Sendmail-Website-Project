@@ -17,9 +17,10 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <script src="https://kit.fontawesome.com/d0cbf0cdf0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
 
     <script defer src="JS/script.js"></script>
 
@@ -30,33 +31,36 @@
 <body class="container">
     <header class="navigation-header">
 
-        <div class="navigation">
-            <a href="#">
-                <img class="logo" alt="SendMail logo" src="img/favicon.png" />
-            </a>
+        <a href="/index.html">
+            <img class="logo" alt="SendMail logo" src="img/logo-2.png" />
+        </a>
 
-            <nav class="main-nav">
-                <ul class="main-nav-list">
-                    <li><a class="main-nav-link" href="#home">Home</a></li>
-                    <li><a class="main-nav-link" href="#about">About</a></li>
-                    <li>
-                        <a class="main-nav-link" href="#features">Features</a>
-                    </li>
-                    <li><a class="main-nav-link" href="#blog">Blog</a></li>
-                    <li><a class="main-nav-link hero-btn-dark" href="#cta">Login</a></li>
-                    <li><a class="main-nav-link hero-btn-light" href="#cta">Register</a></li>
-                </ul>
-            </nav>
+        <nav class="main-nav">
+            <ul class="main-nav-list">
+                <li><a class="main-nav-link" href="/index.html">Home</a></li>
+                <li><a class="main-nav-link" href="#about">About</a></li>
+                <li>
+                    <a class="main-nav-link" href="#features">Features</a>
+                </li>
+                <li><a class="main-nav-link" href="/blog.html">Blog</a></li>
+                <a href="/index.html">
+                    <button class="hero-btn-dark">Login</button>
+                </a>
 
-            <button class="btn-mobile-nav">
-                <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-                <ion-icon class="icon-mobile-nav dark" name="close-outline"></ion-icon>
-            </button>
+                <a href="/sign-up.html">
+                    <button class="hero-btn-light">Register</button>
+                </a>
+            </ul>
+        </nav>
 
-        </div>
+        <button class="btn-mobile-nav">
+            <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+            <ion-icon class="icon-mobile-nav dark" name="close-outline"></ion-icon>
+        </button>
+
     </header>
 
-    <div class="section-hero">
+    <section class="section-hero">
         <div class="hero">
             <div class="hero-text">
                 <h1 class="hero-text-main">
@@ -68,8 +72,13 @@
 
                 <div class="hero-btn">
                     <h2 class="hero-btn-text">Have an account? Login or kindly register an account with us?</h2>
-                    <button class="hero-btn-dark">Login here</button>
-                    <button class="hero-btn-light">Register here</button>
+                    <a href="/index.html">
+                        <button class="hero-btn-dark">Login here</button>
+                    </a>
+
+                    <a href="/sign-up.html">
+                        <button class="hero-btn-light">Register here</button>
+                    </a>
                 </div>
 
                 <div class="delivered-emails">
@@ -79,13 +88,13 @@
                 </div>
 
             </div>
-            <div class="hero-image">
+            <!-- <div class="hero-image">
                 <img class="hero-image_image" src="img/hero-image.svg" alt="">
-            </div>
+            </div> -->
         </div>
-    </div>
+    </section>
 
-    <div class="section-about">
+    <section class="section-about" id="about">
         <div class="about">
             <div class="about-heading">
                 SendMail - <span class="about-span"> Who are we?!</span>
@@ -97,11 +106,13 @@
                 ninja-like security measures. Rest assured, your messages are guarded by our army of cyber superheroes.
                 Join us in this epic quest for email privacy and become a part of the SendMail revolution today!
             </p>
-            <button class="hero-btn-dark">Read More</button>
+            <a href="/blog.html">
+                <button class="hero-btn-dark">Read More</button>
+            </a>
         </div>
-    </div>
+    </section>
 
-    <div class="section-feature">
+    <section class="section-feature" id="features">
         <div class="feature">
             <div class="feature-heading">
                 <p class="feature-heading">Why choose us <span class="feature-heading_span">Today?!</span></p>
@@ -191,60 +202,122 @@
 
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section-registration">
-        <div class="registration">
-            <div class="registration-cta">
-                <div class="registration-cta-text_box">
-                    <h2 class="registration-heading">
-                        Get your first 30 days free by registering today.
-                    </h2>
+    <section class="section-pricing" id="pricing">
+        <div class="pricing">
+            <div class="pricing-text">
+                <h1 class="pricing-heading">Pricing</h1>
+                <h2 class="pricing-subheading">
+                    Enjoy our services without emptying your pocket
+                </h2>
+            </div>
 
-                    <form class="registration-form" name="sign-up" netlify>
-                        <div class="registration-form_input">
-                            <input type="text" placeholder="Enter your name" required>
-                        </div>
+            <div class="pricing-plans">
+                <div class="pricing-plan pricing-plan-free">
+                    <header class="plan">
+                        <p class="plan-name">Free</p>
+                        <p class="plan-price"><span>$</span>0</p>
+                        <p class="plan-text">Enjoy these free services</p>
+                    </header>
 
-                        <div class="registration-form_input">
-                            <input type="text" placeholder="Enter your email" required>
-                        </div>
+                    <ul class="list">
+                        <li class="list-items">
+                            <i class="fa-solid fa-square-check"></i>
+                            <span>Lorem ipsum dolor sit</span>
+                        </li>
 
-                        <div class="registration-form_input">
-                            <input type="password" placeholder="Create password" required>
-                        </div>
+                        <li class="list-items">
+                            <i class="fa-solid fa-square-check"></i>
+                            <span>Consectetur adipisicing elit</span>
+                        </li>
 
-                        <div class="registration-form_input">
-                            <input type="password" placeholder="Confirm password" required>
-                        </div>
+                        <li class="list-items">
+                            <i class="fa-solid fa-square-check"></i>
+                            <span>Autem quas corporis eaque</span>
+                        </li>
 
-                        <div class="registration-form_policy">
-                            <input type="checkbox">
-                            <h3 class="policy-text">I accept all Terms & Conditions</h3>
-                        </div>
+                        <li class="list-items">
+                            <i class="fa-solid fa-square-check"></i>
+                            <span>quod dolorum quos blasz</span>
+                        </li>
 
-                        <button class="hero-btn-dark">Sign Up <span>&#8594</span></button>
+                        <li class="list-items">
+                            <i class="fa-solid fa-xmark"></i>
+                        </li>
 
-                        <div class="registration-form_user">
-                            <h3 class="registration-form-user_login">Already have an account? <a href="#"
-                                    class="registration-form-user_login-link"> &nbsp Login now </a>
-                            </h3>
-                        </div>
+                        <li class="list-items">
+                            <i class="fa-solid fa-xmark"></i>
+                        </li>
+                    </ul>
 
-                    </form>
+                    <div class="plan-sign-up">
+                        <a href="/sign-up.html">
+                            <button class="hero-btn-light">Sign up</button>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="registration-cta-image" role="img" aria-label="Registration image"></div>
+                <div class="pricing-plan pricing-plan-pro">
+                    <header class="plan">
+                        <p class="plan-name">Pro</p>
+                        <p class="plan-price"><span>$</span>150</p>
+                        <p class="plan-text">Enjoy these Pro services</p>
+                    </header>
+
+                    <ul class="list">
+                        <li class="list-items">
+                            <i class="fa-solid fa-square-check"></i>
+                            <span>Lorem ipsum dolor sit</span>
+                        </li>
+
+                        <li class="list-items">
+                            <i class="fa-solid fa-square-check"></i>
+                            <span>Consectetur adipisicing elit</span>
+                        </li>
+
+                        <li class="list-items">
+                            <i class="fa-solid fa-square-check"></i>
+                            <span>Autem quas corporis eaque</span>
+                        </li>
+
+                        <li class="list-items">
+                            <i class="fa-solid fa-square-check"></i>
+                            <span>Tempora dolores perspiciatis</span>
+                        </li>
+
+                        <li class="list-items">
+                            <i class="fa-solid fa-square-check"></i>
+                            <span>Dolores dolorem fugit minus</span>
+                        </li>
+
+                        <li class="list-items">
+                            <i class="fa-solid fa-square-check"></i>
+                            <span>quod dolorum, quos</span>
+                        </li>
+                    </ul>
+
+                    <div class="plan-sign-up">
+                        <a href="/sign-up.html">
+                            <button class="hero-btn-dark">Sign up</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-details">
+                Prices include all applicable taxes. You can cancel at any time.
+                both plans include the following:
             </div>
         </div>
-    </div>
+    </section>
 
     <footer class="section-footer">
         <div class="footer">
             <div class="footer-image">
-                <div class="footer-text">SendMail</div>
-                <a href="#">
-                    <img class="footer-logo" alt="SendMail logo" src="img/favicon.png" />
+                <!-- <div class="footer-text">SendMail</div> -->
+                <a href="/index.html">
+                    <img class="footer-logo" alt="SendMail logo" src="img/logo-2.png" />
                 </a>
             </div>
 
@@ -260,19 +333,19 @@
             </nav>
 
             <div class="footer-socials">
-                <a href="#" class="social">
+                <a href="https://www.facebook.com" target="_blank" class="social">
                     <i class="fa-brands fa-facebook-f a"></i>
                     <i class="fa-brands fa-facebook b"></i>
                 </a>
-                <a href="#" class="social">
+                <a href="https://www.twitter.com" target="_blank" class="social">
                     <i class="fa-brands fa-twitter a"></i>
                     <i class="fa-brands fa-square-twitter b"></i>
                 </a>
-                <a href="#" class="social">
+                <a href="https://www.gmail.com" target="_blank" class="social">
                     <i class="fa-regular fa-envelope a"></i>
                     <i class="fa-solid fa-envelope b"></i>
                 </a>
-                <a href="#" class="social">
+                <a href="https://www.linkedin.com" target="_blank" class="social">
                     <i class="fa-brands fa-linkedin-in a"></i>
                     <i class="fa-brands fa-linkedin b"></i>
                 </a>
