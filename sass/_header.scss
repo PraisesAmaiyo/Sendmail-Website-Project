@@ -1,5 +1,5 @@
 .section-hero {
-    background-image: linear-gradient(to right, rgba($color-primary, .9), rgba($color-primary-light, .53)), url(../img/email-secure.jpg);
+    background-image: linear-gradient(to right, rgba($color-primary-light, .9), rgba($color-primary, .9)), url(../img/email-secure.jpg);
     background-size: cover;
     background-position: center;
     grid-column: 1/-1;
@@ -10,7 +10,7 @@
 
 
     @media only screen and (max-width:$bp-big) {
-        grid-template-rows: 85vh;
+        grid-template-rows: 80vh;
     }
 }
 

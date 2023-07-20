@@ -181,7 +181,7 @@ body {
     text-align: center; }
 
 .section-hero {
-  background-image: linear-gradient(to right, rgba(38, 92, 165, 0.9), rgba(43, 92, 157, 0.53)), url(../img/email-secure.jpg);
+  background-image: linear-gradient(to right, rgba(43, 92, 157, 0.9), rgba(38, 92, 165, 0.9)), url(../img/email-secure.jpg);
   background-size: cover;
   background-position: center;
   grid-column: 1/-1;
@@ -191,7 +191,7 @@ body {
   padding: 6rem 4rem; }
   @media only screen and (max-width: 50.3em) {
     .section-hero {
-      grid-template-rows: 85vh; } }
+      grid-template-rows: 80vh; } }
 
 .hero {
   grid-column: 1/-1;
@@ -718,9 +718,9 @@ body {
         margin-top: 6rem; } }
 
 .navigation-header {
-  background-image: linear-gradient(to right, #265ca5, rgba(43, 92, 157, 0.93));
+  background-image: linear-gradient(to right, #2b5c9d, rgba(38, 92, 165, 0.7));
   grid-column: 1/-1;
-  grid-row: navigation-start/ navigation-end;
+  grid-row: navigation-start / navigation-end;
   display: flex;
   justify-content: space-between;
   align-items: center;

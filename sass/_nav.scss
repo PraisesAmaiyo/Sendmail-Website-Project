@@ -1,7 +1,7 @@
 .navigation-header {
-    background-image: linear-gradient(to right, rgba($color-primary, 2), rgba($color-primary-light, .93));
+    background-image: linear-gradient(to right, rgba($color-primary-light, 1), rgba($color-primary, .7));
     grid-column: 1/-1;
-    grid-row: navigation-start/ navigation-end;
+    grid-row: navigation-start / navigation-end;
 
     display: flex;
     justify-content: space-between;
