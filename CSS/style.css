@@ -846,12 +846,6 @@ body {
     @media only screen and (max-width: 62.5em) {
       .footer-image {
         grid-column: 1/-1; } }
-  .footer-text {
-    font-size: 2.5rem;
-    color: #d4deed;
-    transition: all 1s; }
-    .footer-text:hover {
-      color: #fff; }
   .footer-logo {
     height: 4rem; }
     .footer-logo:hover {
