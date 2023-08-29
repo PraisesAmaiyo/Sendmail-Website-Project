@@ -1,5 +1,7 @@
 # Sendmail-Website-Project
 
+Website link https://sendmailnow.netlify.app/
+
 A landing page website for an Encrypted Email service provider in Nigeria. I built it with HTML, CSS/SASS, and JavaScript.
 
 These are my codes, and the uploaded codes are different. 
