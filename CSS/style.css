@@ -78,6 +78,9 @@ body {
     transform: scale(1.1);
     background-color: #d4deed; }
 
+.mb-2 {
+  margin-bottom: 2rem; }
+
 .section-pricing {
   background-image: linear-gradient(to right, #eef1f6, rgba(238, 241, 246, 0.95));
   grid-column: 1/-1;
@@ -897,3 +900,69 @@ body {
 .social:hover .b {
   display: inline;
   font-size: 3.5rem; }
+
+.section-data {
+  background-image: linear-gradient(to right, #eef1f6, rgba(238, 241, 246, 0.95));
+  grid-column: 1/-1;
+  grid-row: about-start/ about-end;
+  padding: 8rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 100rem 1fr; }
+  @media only screen and (max-width: 75em) {
+    .section-data {
+      grid-template-columns: 100%;
+      grid-template-columns: 1fr 100% 1fr; } }
+  @media only screen and (max-width: 50.3em) {
+    .section-data {
+      grid-template-columns: 100%; } }
+
+.data {
+  grid-column: 2/3;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 80%; }
+  @media only screen and (max-width: 50.3em) {
+    .data {
+      grid-column: 1/-1;
+      width: 95%; } }
+  .data-header {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #12468a;
+    margin: 2rem 0;
+    text-align: center; }
+    .data-header-mini {
+      font-size: 4rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 5rem; }
+    @media only screen and (max-width: 50.3em) {
+      .data-header {
+        margin-top: 3rem;
+        font-size: 3.5rem; } }
+    .data-header .about-span {
+      font-weight: 500;
+      color: #22b6d8; }
+  .data-heading {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #12468a;
+    font-size: 3.5rem;
+    text-align: left; }
+  .data-text {
+    font-weight: 400;
+    color: #12468a;
+    font-size: 2.5rem;
+    margin-bottom: 2rem; }
+    @media only screen and (max-width: 50.3em) {
+      .data-text {
+        font-size: 2.7rem;
+        margin-top: 6rem; } }
+    .data-text-list {
+      list-style-type: square;
+      font-weight: 400;
+      color: #12468a;
+      font-size: 2.5rem;
+      margin-left: 3rem;
+      padding-left: 1rem; }
