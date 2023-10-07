@@ -932,18 +932,18 @@ body {
     color: #12468a;
     margin: 2rem 0;
     text-align: center; }
+    @media only screen and (max-width: 50.3em) {
+      .data-header {
+        margin-top: 3rem;
+        font-size: 3.5rem; } }
     .data-header-mini {
       font-size: 4rem;
       font-weight: 600;
       text-align: center;
       margin-bottom: 5rem; }
-    @media only screen and (max-width: 50.3em) {
-      .data-header {
-        margin-top: 3rem;
-        font-size: 3.5rem; } }
-    .data-header .about-span {
-      font-weight: 500;
-      color: #22b6d8; }
+      @media only screen and (max-width: 50.3em) {
+        .data-header-mini {
+          font-size: 3rem; } }
   .data-heading {
     font-weight: 600;
     margin-bottom: 2rem;
