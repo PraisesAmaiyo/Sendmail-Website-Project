@@ -57,3 +57,24 @@ const obs = new IntersectionObserver(
   }
 );
 obs.observe(headerEl);
+
+// Login form
+
+let form = document.querySelector('.login-form');
+if (form) {
+  document.addEventListener('DOMContentLoaded', function () {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var email = document.getElementById('login-email').value;
+      var password = document.getElementById('login-password').value;
+
+      if (email === '' || password === '') {
+        alert('Please fill in both email and password.');
+        return;
+      }
+
+      window.location.href = 'https://sendmail-dashboard.netlify.app/';
+    });
+  });
+}

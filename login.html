@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+   <meta name="description" content="SendMail &dash;  Secure Email Solutions" />
+   <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,600|Nunito:300,300i,400,600&display=swap"
+      rel="stylesheet" />
+
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css" />
+   <link rel="shortcut icon" type="image/png" href="img/favicon.ico" />
+   <script src="https://kit.fontawesome.com/d0cbf0cdf0.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+   <script defer src="JS/script.js"></script>
+
+   <title>SendMail &mdash; secured mail</title>
+   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+
+<body>
+   <header class="navigation-header">
+
+      <a href="/index.html">
+         <img class="logo" alt="SendMail logo" src="img/logo-2.png" />
+      </a>
+
+      <nav class="main-nav">
+         <ul class="main-nav-list">
+            <li><a class="main-nav-link" href="/index.html">Home</a></li>
+            <li><a class="main-nav-link" href="/index.html#about">About</a></li>
+            <li>
+               <a class="main-nav-link" href="/index.html#features">Features</a>
+            </li>
+            <li><a class="main-nav-link" href="/blog.html">Blog</a></li>
+
+            <a href="/login.html">
+               <button class="hero-btn-dark">Login</button>
+            </a>
+            <a href="/sign-up.html">
+               <button class="hero-btn-light">Register</button>
+            </a>
+         </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+         <ion-icon class="icon-mobile-nav"></ion-icon>
+         <ion-icon class="icon-mobile-nav dark"></ion-icon>
+      </button>
+
+   </header>
+
+   <div class="section-login">
+      <div class="login">
+         <div class="login-cta">
+            <div class="login-cta-text_box">
+               <h2 class="login-heading">
+                  Enter your login details.
+               </h2>
+
+               <form class="login-form" name="sign-up" netlify>
+
+                  <div class="login-form_input">
+                     <label for="login-email">Enter login email</label>
+                     <input id="login-email" type="text" placeholder="Enter login email" name="name" required>
+                  </div>
+
+                  <div class="login-form_input">
+                     <label for="login-password ">Enter password</label>
+                     <input id="login-password" type="text" placeholder="Password" name='password' required>
+                  </div>
+
+
+                  <div class="login-form_user">
+                     <button class="hero-btn-dark">Login</button>
+
+                     <h3 class="login-form-user_login">Don't have an account? <a href="/sign-up.html"
+                           class="login-form-user_login-link"> &nbsp Sign up now </a>
+                     </h3>
+                     <h3 class="login-form-user_login">Forgotten password? Recover <a href="/recoverPassword.html"
+                           class="login-form-user_login-link">
+                           &nbsp Here </a>
+                     </h3>
+                  </div>
+               </form>
+            </div>
+
+            <div class="login-cta-image" role="img" aria-label="login image"></div>
+         </div>
+      </div>
+   </div>
+
+   <footer class="section-footer">
+      <div class="footer">
+         <div class="footer-image">
+            <a href="/index.html">
+               <img class="footer-logo" alt="SendMail logo" src="img/logo-2.png" />
+            </a>
+         </div>
+
+         <nav class="footer-link">
+            <ul class="footer-nav-list">
+               <li><a class="footer-nav-link" href="/index.html">Home</a></li>
+               <li><a class="footer-nav-link" href="/index.html#about">About</a></li>
+               <li><a class="footer-nav-link" href="/dataPolicy.html">Data Policy</a></li>
+               <li>
+                  <a class="footer-nav-link" href="/index.html#features">Features</a>
+               </li>
+               <li><a class="footer-nav-link" href="/blog.html">Blog</a></li>
+            </ul>
+         </nav>
+
+         <div class="footer-socials">
+            <a href="https://www.facebook.com" target="_blank" class="social">
+               <i class="fa-brands fa-facebook-f a"></i>
+               <i class="fa-brands fa-facebook b"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" class="social">
+               <i class="fa-brands fa-twitter a"></i>
+               <i class="fa-brands fa-square-twitter b"></i>
+            </a>
+            <a href="https://www.gmail.com" target="_blank" class="social">
+               <i class="fa-regular fa-envelope a"></i>
+               <i class="fa-solid fa-envelope b"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="social">
+               <i class="fa-brands fa-linkedin-in a"></i>
+               <i class="fa-brands fa-linkedin b"></i>
+            </a>
+         </div>
+      </div>
+
+   </footer>
+</body>
+
+</html>
+
+
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+      var form = document.querySelector(".login-form");
+
+      form.addEventListener("submit", function (e) {
+         e.preventDefault();
+
+         var email = document.getElementById("login-email").value;
+         var password = document.getElementById("login-password").value;
+
+         if (email === "" || password === "") {
+            alert("Please fill in both email and password.");
+            return;
+         }
+
+
+         window.location.href = "https://sendmail-dashboard.netlify.app/";
+      });
+   });
+</script>

@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+.section-login {
+   background-image: linear-gradient(to right, rgba($color-primary, 2), rgba($color-primary-light, .93)), url(../img/hero-image.svg);
+   grid-column: 1/-1;
+   grid-row: header-start/ header-end;
+   padding: 8rem 2rem;
+   // height: 100%;
+
+
+   display: grid;
+   grid-template-columns: 1fr 100rem 1fr;
+
+   @media only screen and (max-width:$bp-largest) {
+      grid-template-columns: 100%;
+      grid-template-columns: 1fr 100% 1fr;
+   }
+
+   @media only screen and (max-width:$bp-big) {
+      grid-template-columns: 100%;
+   }
+
+   .login {
+      grid-column: 2/3;
+      margin: 0 auto;
+      background-image: linear-gradient(to right, rgba($color-primary, 2), rgba($color-primary-light, .93));
+      width: 100%;
+      // padding: 3.4rem;
+      border-radius: 10px;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+
+      @media only screen and (max-width:$bp-big) {
+         grid-column: 1/-1;
+      }
+
+      &-cta {
+         display: grid;
+         grid-template-columns: 1.5fr 1fr;
+
+         @media only screen and (max-width:$bp-big) {
+            grid-template-columns: 1fr;
+         }
+
+         &-text_box {
+            padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+
+            @media only screen and (max-width:$bp-big) {
+               grid-row: 2/3;
+               margin-top: 2rem;
+               padding: 4.8rem 3.4rem 6.4rem 3.4rem;
+            }
+         }
+
+         &-image {
+            background-image: linear-gradient(to right, rgba($color-primary, .5), rgba($color-primary-light, .5)), url(../img/login-image.png);
+            background-size: cover;
+            background-position: center;
+
+
+            @media only screen and (max-width:$bp-big) {
+               grid-row: 1/2;
+               height: 32rem;
+            }
+         }
+      }
+
+      &-heading {
+         position: relative;
+         font-size: 3rem;
+         font-weight: 600;
+         color: $color-grey-light-1;
+      }
+
+      &-form {
+         margin-top: 3rem;
+
+         &_input {
+            height: 5rem;
+            margin: 7rem 0;
+
+            label {
+               display: block;
+               padding-left: 2rem;
+               text-align: left;
+               font-size: 2rem;
+               font-weight: 500;
+               margin-bottom: 1.2rem;
+               color: $color-grey-light-1;
+            }
+
+            input {
+               height: 100%;
+               width: 100%;
+               outline: none;
+               padding: 1.5rem 2rem;
+               font-size: 2.5rem;
+               font-family: inherit;
+               font-weight: 500;
+               color: $color-primary;
+               border: none;
+               background-color: #e9eff6;
+               border-radius: 9px;
+               box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+               transition: all 0.3s ease;
+
+               &:focus,
+               &:valid {
+                  background-color: $color-grey-light-1;
+                  box-shadow: 0 0 0 0.8rem rgba($color-secondary-light, .36);
+               }
+            }
+         }
+
+         .hero-btn-dark {
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+
+            &:hover {
+               transform: scale(1.06);
+            }
+         }
+
+         &-user_login {
+            font-size: 1.5rem;
+            color: $color-grey-light-1;
+            text-align: left;
+            font-weight: 400;
+
+            &-link {
+               color: $color-secondary-dark;
+               text-decoration: none;
+               font-size: 1.8rem;
+               font-weight: 600;
+               position: relative;
+
+               &::before {
+                  transition: all .3s;
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  display: block;
+                  content: '';
+                  height: 1px;
+                  width: 0px;
+                  background-color: $color-secondary-dark;
+               }
+
+               &:hover {
+
+                  &::before {
+                     width: 100%;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
