@@ -30,40 +30,40 @@ $bp-smallest: 30em;
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
+   box-sizing: border-box;
+   font-size: 62.5%;
 
-    @media only screen and (max-width:$bp-largest) {
-        font-size: 50%;
-    }
+   @media only screen and (max-width:$bp-largest) {
+      font-size: 50%;
+   }
 
-    @media only screen and (max-width:$bp-medium) {
-        font-size: 40%;
-    }
+   @media only screen and (max-width:$bp-medium) {
+      font-size: 40%;
+   }
 
-    @media only screen and (max-width:$bp-smaller) {
-        font-size: 30%;
-    }
+   @media only screen and (max-width:$bp-smaller) {
+      font-size: 30%;
+   }
 }
 
 body {
-    font-family: $font-primary;
-    font-display: swap;
-    color: $color-primary;
-    font-weight: 300;
-    line-height: 1.4;
+   font-family: $font-primary;
+   font-display: swap;
+   color: $color-primary;
+   font-weight: 300;
+   line-height: 1.4;
 }
 
 .container {
-    overflow-x: hidden;
-    display: grid;
-    grid-template-rows: [navigation-start] max-content [navigation-end header-start] 1fr[header-end about-start] max-content [about-end featured-start] max-content [featured-end pricing-start] max-content [pricing-end footer-start] min-content [footer-end];
+   overflow-x: hidden;
+   display: grid;
+   grid-template-rows: [countdown-start] max-content [countdown-end navigation-start] max-content [navigation-end header-start] 1fr[header-end about-start] max-content [about-end featured-start] max-content [featured-end pricing-start] max-content [pricing-end footer-start] min-content [footer-end];
 
-    grid-template-columns: 1fr repeat(6, [col-start] minmax(min-content, 14rem)[col-end]) 1fr;
+   grid-template-columns: 1fr repeat(6, [col-start] minmax(min-content, 14rem)[col-end]) 1fr;
 }

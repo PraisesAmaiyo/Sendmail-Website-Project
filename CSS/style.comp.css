@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 *,
 *::before,
 *::after {
@@ -77,6 +78,9 @@ body {
   .hero-btn-light:hover {
     transform: scale(1.1);
     background-color: #d4deed; }
+
+.mb-2 {
+  margin-bottom: 2rem; }
 
 .section-pricing {
   background-image: linear-gradient(to right, #eef1f6, rgba(238, 241, 246, 0.95));
@@ -897,3 +901,186 @@ body {
 .social:hover .b {
   display: inline;
   font-size: 3.5rem; }
+
+.section-data {
+  background-image: linear-gradient(to right, #eef1f6, rgba(238, 241, 246, 0.95));
+  grid-column: 1/-1;
+  grid-row: about-start/ about-end;
+  padding: 8rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 100rem 1fr; }
+  @media only screen and (max-width: 75em) {
+    .section-data {
+      grid-template-columns: 100%;
+      grid-template-columns: 1fr 100% 1fr; } }
+  @media only screen and (max-width: 50.3em) {
+    .section-data {
+      grid-template-columns: 100%; } }
+
+.data {
+  grid-column: 2/3;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 80%; }
+  @media only screen and (max-width: 50.3em) {
+    .data {
+      grid-column: 1/-1;
+      width: 95%; } }
+  .data-header {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #12468a;
+    margin: 2rem 0;
+    text-align: center; }
+    @media only screen and (max-width: 50.3em) {
+      .data-header {
+        margin-top: 3rem;
+        font-size: 3.5rem; } }
+    .data-header-mini {
+      font-size: 4rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 5rem; }
+      @media only screen and (max-width: 50.3em) {
+        .data-header-mini {
+          font-size: 3rem; } }
+  .data-heading {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #12468a;
+    font-size: 3.5rem;
+    text-align: left; }
+  .data-text {
+    font-weight: 400;
+    color: #12468a;
+    font-size: 2.5rem;
+    margin-bottom: 2rem; }
+    @media only screen and (max-width: 50.3em) {
+      .data-text {
+        font-size: 2.7rem;
+        margin-top: 6rem; } }
+    .data-text-list {
+      list-style-type: square;
+      font-weight: 400;
+      color: #12468a;
+      font-size: 2.5rem;
+      margin-left: 3rem;
+      padding-left: 1rem; }
+
+.section-login {
+  background-image: linear-gradient(to right, #265ca5, rgba(43, 92, 157, 0.93)), url(../img/hero-image.svg);
+  grid-column: 1/-1;
+  grid-row: header-start/ header-end;
+  padding: 8rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 100rem 1fr; }
+  @media only screen and (max-width: 75em) {
+    .section-login {
+      grid-template-columns: 100%;
+      grid-template-columns: 1fr 100% 1fr; } }
+  @media only screen and (max-width: 50.3em) {
+    .section-login {
+      grid-template-columns: 100%; } }
+  .section-login .login {
+    grid-column: 2/3;
+    margin: 0 auto;
+    background-image: linear-gradient(to right, #265ca5, rgba(43, 92, 157, 0.93));
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; }
+    @media only screen and (max-width: 50.3em) {
+      .section-login .login {
+        grid-column: 1/-1; } }
+    .section-login .login-cta {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr; }
+      @media only screen and (max-width: 50.3em) {
+        .section-login .login-cta {
+          grid-template-columns: 1fr; } }
+      .section-login .login-cta-text_box {
+        padding: 4.8rem 6.4rem 6.4rem 6.4rem; }
+        @media only screen and (max-width: 50.3em) {
+          .section-login .login-cta-text_box {
+            grid-row: 2/3;
+            margin-top: 2rem;
+            padding: 4.8rem 3.4rem 6.4rem 3.4rem; } }
+      .section-login .login-cta-image {
+        background-image: linear-gradient(to right, rgba(38, 92, 165, 0.5), rgba(43, 92, 157, 0.5)), url(../img/login-image.png);
+        background-size: cover;
+        background-position: center; }
+        @media only screen and (max-width: 50.3em) {
+          .section-login .login-cta-image {
+            grid-row: 1/2;
+            height: 32rem; } }
+    .section-login .login-heading {
+      position: relative;
+      font-size: 3rem;
+      font-weight: 600;
+      color: #fff; }
+    .section-login .login-form {
+      margin-top: 3rem; }
+      .section-login .login-form_input {
+        height: 5rem;
+        margin: 7rem 0; }
+        .section-login .login-form_input label {
+          display: block;
+          padding-left: 2rem;
+          text-align: left;
+          font-size: 2rem;
+          font-weight: 500;
+          margin-bottom: 1.2rem;
+          color: #fff; }
+        .section-login .login-form_input input {
+          height: 100%;
+          width: 100%;
+          outline: none;
+          padding: 1.5rem 2rem;
+          font-size: 2.5rem;
+          font-family: inherit;
+          font-weight: 500;
+          color: #265ca5;
+          border: none;
+          background-color: #e9eff6;
+          border-radius: 9px;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease; }
+          .section-login .login-form_input input:focus, .section-login .login-form_input input:valid {
+            background-color: #fff;
+            box-shadow: 0 0 0 0.8rem rgba(212, 222, 237, 0.36); }
+      .section-login .login-form .hero-btn-dark {
+        padding: 1.5rem 2rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.3rem; }
+        .section-login .login-form .hero-btn-dark:hover {
+          transform: scale(1.06); }
+      .section-login .login-form-user_login {
+        font-size: 1.5rem;
+        color: #fff;
+        text-align: left;
+        font-weight: 400; }
+        .section-login .login-form-user_login-link {
+          color: #22b6d8;
+          text-decoration: none;
+          font-size: 1.8rem;
+          font-weight: 600;
+          position: relative; }
+          .section-login .login-form-user_login-link::before {
+            transition: all .3s;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            content: '';
+            height: 1px;
+            width: 0px;
+            background-color: #22b6d8; }
+          .section-login .login-form-user_login-link:hover::before {
+            width: 100%; }
