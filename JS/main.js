@@ -1,5 +1,5 @@
 const cfg = {
-  finalDate: 'January 1, 2024 00:00:00',
+  finalDate: 'January 1, 2025 00:00:00',
 };
 
 const ssCountdown = function () {

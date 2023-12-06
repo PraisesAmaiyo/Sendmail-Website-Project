@@ -20,9 +20,8 @@
    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-   <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-
    <script defer src="JS/script.js"></script>
+   <script defer src="JS/main.js"></script>
 
    <title>SendMail &mdash; secured mail</title>
    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
@@ -37,18 +36,18 @@
 
       <nav class="main-nav">
          <ul class="main-nav-list">
-            <li><a class="main-nav-link" href="/index.html">Home</a></li>
-            <li><a class="main-nav-link" href="#about">About</a></li>
-            <li><a class="main-nav-link" href="/dataPolicy.html">Data Policy</a></li>
+            <li><a class="main-nav-link" href="#">Home</a></li>
+            <li><a class="main-nav-link" href="#">About</a></li>
+            <li><a class="main-nav-link" href="#">Data Policy</a></li>
             <li>
-               <a class="main-nav-link" href="#features">Features</a>
+               <a class="main-nav-link" href="#">Features</a>
             </li>
-            <li><a class="main-nav-link" href="/blog.html">Blog</a></li>
-            <a href="/login.html">
+            <li><a class="main-nav-link" href="#">Blog</a></li>
+            <a href="#">
                <button class="hero-btn-dark">Login</button>
             </a>
 
-            <a href="/sign-up.html">
+            <a href="#">
                <button class="hero-btn-light">Register</button>
             </a>
          </ul>
@@ -61,301 +60,57 @@
 
    </header>
 
-   <section class="section-hero">
-      <div class="hero">
-         <div class="hero-text">
-            <h1 class="hero-text-main">
-               Secure Email Solutions
-            </h1>
-            <p class="hero-text-mini">
-               We deliver premium services to safeguard your emails.
-            </p>
+   <section id="section-countdown" class="section-countdown">
+      <div class="countdown">
 
-            <div class="hero-btn">
-               <h2 class="hero-btn-text">Have an account? Login or kindly register an account with us?</h2>
-               <a href="/login.html">
-                  <button class="hero-btn-dark">Login here</button>
-               </a>
+         <div class="section-countdown__bg"></div>
 
-               <a href="/sign-up.html">
-                  <button class="hero-btn-light">Register here</button>
-               </a>
+         <div class="row section-countdown__content">
+
+            <div class="section-countdown__content-top">
+               <h1>
+                  We are currently working on something awesome. Stay tuned!
+               </h1>
+               <!-- <p class="">
+               Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+               lorem quis bibendum auctor, nisi elit consequat ipsum.
+            </p> -->
             </div>
 
-            <div class="delivered-emails">
-               <p class="delivered-text">Over
-                  <span>650,000</span> mails delivered this year!
-               </p>
+            <div class="section-countdown__content-sep">
+               <span></span>
+               <span>Time left until launching</span>
+               <span></span>
             </div>
 
-         </div>
-         <!-- <div class="hero-image">
-                <img class="hero-image_image" src="img/hero-image.svg" alt="">
-            </div> -->
-      </div>
-
-   </section>
-
-
-   <section class="section-about" id="about">
-      <div class="about">
-         <div class="about-heading">
-            SendMail - <span class="about-span"> Who are we?!</span>
-            <img class="stroke" src="./img/stroke.png" alt="Underline">
-         </div>
-         <p class="about-text">
-            At SendMail, we believe in a world where privacy and email coexist harmoniously, like a secret dance
-            party in your inbox. We've built an impenetrable fortress of encryption, armed with digital shields and
-            ninja-like security measures. Rest assured, your messages are guarded by our army of cyber superheroes.
-            Join us in this epic quest for email privacy and become a part of the SendMail revolution today!
-         </p>
-         <a href="/blog.html">
-            <button class="hero-btn-dark">Read More</button>
-         </a>
-      </div>
-   </section>
-
-   <section class="section-feature" id="features">
-      <div class="feature">
-         <div class="feature-heading">
-            <p class="feature-heading">Why choose us <span class="feature-heading_span">Today?!</span></p>
-            <img class="stroke" src="./img/stroke.png" alt="Underline">
-         </div>
-
-         <div class="featured">
-            <div class="featured-group">
-               <div class="featured-group-icon">
-                  <i class="fa-solid fa-lock icon-lock"></i>
+            <div class="section-countdown__content-counter counter">
+               <div class="counter__time">
+                  <span class="ss-days">365</span>
+                  <span>Days</span>
                </div>
-               <div class="featured-group-heading">
-                  Data Encryption
+               <div class="counter__time">
+                  <span class="ss-hours">03</span>
+                  <span>Hours</span>
                </div>
-               <p class="featured-group-text">
-                  We promise not to read your emails (unless they're really juicy). Our top-secret encryption
-                  ensures
-                  your
-                  messages stay hidden from prying eyes. Feel free to share your deepest secrets with us!
-               </p>
+               <div class="counter__time minutes">
+                  <span class="ss-minutes">01</span>
+                  <span>Mins</span>
+               </div>
+               <div class="counter__time">
+                  <span class="ss-seconds">55</span>
+                  <span>Secs</span>
+               </div>
             </div>
-            <div class="featured-group">
-               <div class="featured-group-icon">
-                  <i class="fa-solid fa-globe icon-globe"></i>
-               </div>
-               <div class="featured-group-heading">
-                  Custom Domain
-               </div>
-               <p class="featured-group-text">
-                  Level up with custom domains—your email address that screams "I mean business!" Show customers
-                  who's boss, block spammers, ditch trackers, and keep messages away from nosy parkers. Your
-                  domain, your rules!
-               </p>
-            </div>
-            <div class="featured-group">
-               <div class="featured-group-icon">
-                  <i class="fa-solid fa-business-time icon-business-time"></i>
-               </div>
-               <div class="featured-group-heading">
-                  Deadman Timer
-               </div>
-               <p class="featured-group-text">
-                  Harness the Deadman Timer power! Prevent email mishaps with timely reviews. Ensure accuracy and
-                  reach the right inbox. Get notified just in time to save the day or abort the mission.
-                  Superpowers activated!
-               </p>
-            </div>
-            <div class="featured-group">
-               <div class="featured-group-icon">
-                  <i class="fa-solid fa-user-secret icon-user-secret"></i>
-               </div>
-               <div class="featured-group-heading">
-                  Self Destruct Emails
-               </div>
-               <p class="featured-group-text">
-                  Unleash your inner spy with SendMail's Self-destruct Emails. Set an expiration date, and watch
-                  your messages vanish into thin air. Perfect for top-secret missions, ensuring no trace remains
-                  once the message is decrypted. Your confidential emails, now on a disappearing act!.
-               </p>
-            </div>
-            <div class="featured-group">
-               <div class="featured-group-icon">
-                  <i class="fa-solid fa-user-shield icon-user-shield"></i>
-               </div>
-               <div class="featured-group-heading">
-                  2 Factor Authentication
-               </div>
-               <p class="featured-group-text">
-                  At SendMail, we take security seriously, offering 2FA like a boss. Double up your defense with
-                  the power of passwords and smartphones. Accessing your emails will require more than just secret
-                  knowledge. It's like having a personal bodyguard for your inbox!
-               </p>
-            </div>
-            <div class="featured-group">
-               <div class="featured-group-icon">
-                  <i class="fa-solid fa-mask icon-mask"></i>
-               </div>
-               <div class="featured-group-heading">
-                  Alias
-               </div>
-               <p class="featured-group-text">
-                  The ultimate disguise for your email kingdom. Create additional identities linked to your main
-                  account. Free users get one alias, while paid members unlock ten. Seamlessly manage multiple
-                  accounts with all emails neatly landing in one inbox. Master of disguise, you are!
-               </p>
+
+            <div class="section-countdown-subscribe">
+               <form id="notify-form" class="notify-form">
+                  <input type="email" name="EMAIL" id="notify-email" class="" placeholder="Email Address" required>
+
+                  <button type="submit" name="subscribe" class="">Notify Me</button>
+               </form>
             </div>
 
          </div>
       </div>
    </section>
-
-   <section class="section-pricing" id="pricing">
-      <div class="pricing">
-         <div class="pricing-text">
-            <h1 class="pricing-heading">Pricing</h1>
-            <h2 class="pricing-subheading">
-               Enjoy our services without emptying your pocket
-            </h2>
-         </div>
-
-         <div class="pricing-plans">
-            <div class="pricing-plan pricing-plan-free">
-               <header class="plan">
-                  <p class="plan-name">Free</p>
-                  <p class="plan-price"><span>$</span>0</p>
-                  <p class="plan-text">Enjoy these free services</p>
-               </header>
-
-               <ul class="list">
-                  <li class="list-items">
-                     <i class="fa-solid fa-square-check"></i>
-                     <span>Lorem ipsum dolor sit</span>
-                  </li>
-
-                  <li class="list-items">
-                     <i class="fa-solid fa-square-check"></i>
-                     <span>Consectetur adipisicing elit</span>
-                  </li>
-
-                  <li class="list-items">
-                     <i class="fa-solid fa-square-check"></i>
-                     <span>Autem quas corporis eaque</span>
-                  </li>
-
-                  <li class="list-items">
-                     <i class="fa-solid fa-square-check"></i>
-                     <span>quod dolorum quos blasz</span>
-                  </li>
-
-                  <li class="list-items">
-                     <i class="fa-solid fa-xmark"></i>
-                  </li>
-
-                  <li class="list-items">
-                     <i class="fa-solid fa-xmark"></i>
-                  </li>
-               </ul>
-
-               <div class="plan-sign-up">
-                  <a href="/sign-up.html">
-                     <button class="hero-btn-light">Sign up</button>
-                  </a>
-               </div>
-            </div>
-
-            <div class="pricing-plan pricing-plan-pro">
-               <header class="plan">
-                  <p class="plan-name">Pro</p>
-                  <p class="plan-price"><span>$</span>150</p>
-                  <p class="plan-text">Enjoy these Pro services</p>
-               </header>
-
-               <ul class="list">
-                  <li class="list-items">
-                     <i class="fa-solid fa-square-check"></i>
-                     <span>Lorem ipsum dolor sit</span>
-                  </li>
-
-                  <li class="list-items">
-                     <i class="fa-solid fa-square-check"></i>
-                     <span>Consectetur adipisicing elit</span>
-                  </li>
-
-                  <li class="list-items">
-                     <i class="fa-solid fa-square-check"></i>
-                     <span>Autem quas corporis eaque</span>
-                  </li>
-
-                  <li class="list-items">
-                     <i class="fa-solid fa-square-check"></i>
-                     <span>Tempora dolores perspiciatis</span>
-                  </li>
-
-                  <li class="list-items">
-                     <i class="fa-solid fa-square-check"></i>
-                     <span>Dolores dolorem fugit minus</span>
-                  </li>
-
-                  <li class="list-items">
-                     <i class="fa-solid fa-square-check"></i>
-                     <span>quod dolorum, quos</span>
-                  </li>
-               </ul>
-
-               <div class="plan-sign-up">
-                  <a href="/sign-up.html">
-                     <button class="hero-btn-dark">Sign up</button>
-                  </a>
-               </div>
-            </div>
-         </div>
-
-         <div class="pricing-details">
-            Prices include all applicable taxes. You can cancel at any time.
-            both plans include the following:
-         </div>
-      </div>
-   </section>
-
-   <footer class="section-footer">
-      <div class="footer">
-         <div class="footer-image">
-            <a href="/index.html">
-               <img class="footer-logo" alt="SendMail logo" src="img/logo-2.png" />
-            </a>
-         </div>
-
-         <nav class="footer-link">
-            <ul class="footer-nav-list">
-               <li><a class="footer-nav-link" href="#home">Home</a></li>
-               <li><a class="footer-nav-link" href="#about">About</a></li>
-               <li><a class="footer-nav-link" href="dataPolicy.html">Data Policy</a></li>
-               <li>
-                  <a class="footer-nav-link" href="#features">Features</a>
-               </li>
-               <li><a class="footer-nav-link" href="blog.html">Blog</a></li>
-            </ul>
-         </nav>
-
-         <div class="footer-socials">
-            <a href="https://www.facebook.com" target="_blank" class="social">
-               <i class="fa-brands fa-facebook-f a"></i>
-               <i class="fa-brands fa-facebook b"></i>
-            </a>
-            <a href="https://www.twitter.com" target="_blank" class="social">
-               <i class="fa-brands fa-twitter a"></i>
-               <i class="fa-brands fa-square-twitter b"></i>
-            </a>
-            <a href="https://www.gmail.com" target="_blank" class="social">
-               <i class="fa-regular fa-envelope a"></i>
-               <i class="fa-solid fa-envelope b"></i>
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" class="social">
-               <i class="fa-brands fa-linkedin-in a"></i>
-               <i class="fa-brands fa-linkedin b"></i>
-            </a>
-         </div>
-      </div>
-
-   </footer>
 </body>
-
-</html>

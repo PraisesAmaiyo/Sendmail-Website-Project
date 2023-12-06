@@ -191,3 +191,95 @@
    line-height: 1;
    color: rgba(255, 255, 255, 0.6);
 }
+
+///////////////////////////////
+
+.section-countdown-subscribe {
+   width: 75%;
+   max-width: 100%;
+   text-align: center;
+   margin-right: auto;
+   margin-left: auto;
+   margin-top: 3rem;
+
+   @media only screen and (max-width:$bp-small) {
+      width: 90%;
+   }
+
+}
+
+.section-countdown-subscribe .notify-form {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   align-items: center;
+   margin-top: 2.5rem;
+
+   @media only screen and (max-width:$bp-small) {
+      flex-direction: column;
+   }
+
+}
+
+.section-countdown-subscribe input[type=email],
+.section-countdown-subscribe button {
+   margin-bottom: 2rem;
+
+   @media only screen and (max-width:$bp-small) {
+      margin-bottom: 0;
+   }
+}
+
+.section-countdown-subscribe input[type=email] {
+   width: 70%;
+   background-color: rgba(255, 255, 255, 0.155);
+   font-size: 2rem;
+   border: 1px solid transparent;
+   border-right: none;
+   border-radius: 5px 0 0 5px;
+   padding: 2rem 2.4rem;
+   box-shadow: none;
+   color: white;
+   text-align: left;
+
+   @media only screen and (max-width:$bp-small) {
+      width: 100%;
+      border-radius: 5px 5px 0 0;
+   }
+}
+
+input::placeholder {
+   color: rgba($color-secondary-light, 0.6);
+   opacity: 1;
+
+   @media only screen and (max-width:$bp-small) {
+      text-align: center;
+   }
+}
+
+input:focus {
+   outline: 0;
+}
+
+.section-countdown-subscribe button {
+   width: 30%;
+   padding: 2rem 2.4rem;
+   margin-right: 0;
+   border-radius: 0 5px 5px 0;
+   border: 0;
+   background-color: $color-primary;
+   color: $color-grey-light-1;
+   font-size: 2rem;
+   transition: .3s;
+   position: relative;
+
+   @media only screen and (max-width:$bp-small) {
+      width: 100%;
+      border-radius: 0 0 5px 5px;
+   }
+
+   &:hover {
+      background-color: #1b4073;
+   }
+
+}
